@@ -845,3 +845,47 @@ img {
     padding-bottom: 42px;
   }
 }
+@media (max-width: 640px) {
+  .feature-grid,
+  .steps,
+  .pro-feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .feature-card,
+  .step-card,
+  .pro-card {
+    min-height: auto;
+    padding: 16px;
+    border-radius: 18px;
+  }
+
+  .feature-icon,
+  .step-number {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 12px;
+    border-radius: 12px;
+    font-size: 0.78rem;
+  }
+
+  .feature-card h3,
+  .step-card h3,
+  .pro-card h3 {
+    font-size: 0.92rem;
+    line-height: 1.12;
+    margin-bottom: 7px;
+  }
+
+  .feature-card p,
+  .step-card p,
+  .pro-card p {
+    font-size: 0.78rem;
+    line-height: 1.45;
+  }
+
+  .steps {
+    align-items: stretch;
+  }
+}
