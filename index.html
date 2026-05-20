@@ -69,6 +69,14 @@
       overflow-x: hidden;
     }
 
+    section[id] {
+      scroll-margin-top: 110px;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
     .site-header {
       backdrop-filter: blur(18px);
       -webkit-backdrop-filter: blur(18px);
@@ -452,8 +460,14 @@
     }
 
     .showcase-card img {
-      aspect-ratio: 16 / 9;
-      object-fit: cover;
+      width: 100%;
+      height: auto !important;
+      max-height: none !important;
+      aspect-ratio: auto !important;
+      object-fit: contain !important;
+      object-position: center center !important;
+      background: #050505;
+      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
     }
 
     .showcase-card-body {
@@ -480,6 +494,22 @@
       margin-top: 34px;
     }
 
+
+    #use-cases .section-header h2 {
+      max-width: 980px;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: clamp(2rem, 5vw, 3.9rem);
+      line-height: 1.02;
+      text-wrap: balance;
+    }
+
+    #use-cases .section-header p {
+      max-width: 760px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
     .use-case-card {
       overflow: hidden;
       border-radius: 24px;
@@ -489,8 +519,14 @@
     }
 
     .use-case-card img {
-      aspect-ratio: 4 / 3;
-      object-fit: cover;
+      width: 100%;
+      height: auto !important;
+      max-height: none !important;
+      aspect-ratio: auto !important;
+      object-fit: contain !important;
+      object-position: center center !important;
+      background: #050505;
+      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
     }
 
     .use-case-card div {
@@ -644,6 +680,10 @@
     }
 
     @media (max-width: 640px) {
+      #use-cases .section-header h2 {
+        font-size: clamp(2rem, 10vw, 2.8rem);
+        line-height: 1.06;
+      }
       .social-section {
         padding: 46px 0;
       }
@@ -982,9 +1022,9 @@
       <div class="container">
         <div class="section-header center" data-reveal>
           <div class="kicker">Use Cases</div>
-          <h2>One place for the links scattered across your day.</h2>
+          <h2>One place for links that would otherwise disappear.</h2>
           <p>
-            AuraCache is made for the content people save with real intention — from product finds to research links and ideas worth revisiting.
+            AuraCache is made for the links people save for a reason — from product finds to research pages, videos, articles, and ideas worth revisiting.
           </p>
         </div>
 
@@ -1000,8 +1040,8 @@
           <article class="use-case-card" style="--reveal-delay: 160ms;" data-reveal>
             <img src="images/auracache-saved-links.png" alt="Saved articles, videos, and social content in AuraCache" loading="lazy" decoding="async">
             <div>
-              <h3>Content to revisit</h3>
-              <p>Save videos, articles, social posts, and references without losing context.</p>
+              <h3>Links worth revisiting</h3>
+              <p>Save videos, articles, social posts, and references without losing the reason you kept them.</p>
             </div>
           </article>
 
@@ -1009,7 +1049,7 @@
             <img src="images/auracache-reminders-tasks.png" alt="Saved link reminders and follow-up tasks in AuraCache" loading="lazy" decoding="async">
             <div>
               <h3>Follow-up tasks</h3>
-              <p>Attach a next step to saved links so they can move from memory to action.</p>
+              <p>Add a reminder or follow-up so saved links can move from memory to action.</p>
             </div>
           </article>
         </div>
