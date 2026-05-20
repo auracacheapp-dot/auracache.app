@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>AuraCache — Save links. Turn them into action.</title>
+  <title>AuraCache — Save, organize, and revisit important links</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="AuraCache Free helps you save links, organize products, articles, videos, and ideas, then revisit them with reminders and a clean local-first dashboard.">
+  <meta name="description" content="AuraCache helps you save useful links from products, articles, videos, social posts, and ideas, then organize and revisit them with reminders when the time is right.">
+  <meta name="keywords" content="AuraCache, save links, link organizer, bookmark manager, link reminders, read later app, productivity app, save articles, save videos, save product links">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://auracache.app/">
 
@@ -12,12 +13,12 @@
   <meta property="og:site_name" content="AuraCache">
   <meta property="og:url" content="https://auracache.app/">
   <meta property="og:title" content="AuraCache — Save links. Turn them into action.">
-  <meta property="og:description" content="Save links, organize what matters, and revisit saved products, articles, videos, and ideas at the right time.">
+  <meta property="og:description" content="Save useful links, organize what matters, and revisit products, articles, videos, social posts, and ideas at the right time.">
   <meta property="og:image" content="https://auracache.app/og-image.png">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="AuraCache — Save links. Turn them into action.">
-  <meta name="twitter:description" content="Save links, organize what matters, and revisit saved products, articles, videos, and ideas at the right time.">
+  <meta name="twitter:description" content="A focused link organizer that helps saved content become useful again.">
   <meta name="twitter:image" content="https://auracache.app/og-image.png">
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YW6B66FDKB"></script>
@@ -41,7 +42,102 @@
 
   <link rel="stylesheet" href="style.css">
 
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "AuraCache",
+    "applicationCategory": "ProductivityApplication",
+    "operatingSystem": "Android",
+    "description": "AuraCache helps people save useful links, organize them, remember them later, and return to them at the right time.",
+    "url": "https://auracache.app/",
+    "image": "https://auracache.app/og-image.png",
+    "publisher": {
+      "@type": "Organization",
+      "name": "AuraCache",
+      "url": "https://auracache.app/"
+    }
+  }
+  </script>
+
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      overflow-x: hidden;
+    }
+
+    .site-header {
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .brand-mark {
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(56, 189, 248, 0.22);
+    }
+
+    .nav-cta {
+      white-space: nowrap;
+    }
+
+    .hero {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: -20% -10% auto -10%;
+      height: 680px;
+      background:
+        radial-gradient(circle at 16% 22%, rgba(56, 189, 248, 0.24), transparent 34%),
+        radial-gradient(circle at 78% 16%, rgba(250, 204, 21, 0.18), transparent 32%),
+        radial-gradient(circle at 50% 72%, rgba(34, 197, 94, 0.12), transparent 36%);
+      pointer-events: none;
+      z-index: -1;
+    }
+
+    .hero-lead strong,
+    .section-header strong {
+      color: #0f172a;
+      font-weight: 800;
+    }
+
+    .hero-proof {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .hero-proof span {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 12px;
+      border: 1px solid rgba(148, 163, 184, 0.18);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.72);
+      color: #475569;
+      font-size: 0.82rem;
+      font-weight: 700;
+      box-shadow: 0 14px 34px rgba(15, 23, 42, 0.07);
+    }
+
+    .hero-proof span::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      border-radius: 999px;
+      background: #38bdf8;
+      box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.12);
+    }
+
     .social-icon-links {
       display: flex;
       flex-wrap: wrap;
@@ -186,29 +282,8 @@
       flex: 0 0 auto;
     }
 
-    @media (max-width: 760px) {
-      .compare-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .social-section {
-        padding: 46px 0;
-      }
-
-      .social-section-card {
-        padding: 26px 20px;
-        border-radius: 22px;
-      }
-
-      .social-section .social-icon-link {
-        width: 42px;
-        height: 42px;
-      }
-    }
-
     .hero-image-shell {
+      position: relative;
       width: min(100%, 760px);
       margin: 0 auto;
       padding: 10px;
@@ -221,12 +296,138 @@
       overflow: hidden;
     }
 
+    .hero-image-shell::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255,255,255,0.12), transparent 42%, rgba(56,189,248,0.08));
+      pointer-events: none;
+    }
+
     .hero-image-shell img,
     .showcase-card img,
-    .free-release-media img {
+    .launch-media img,
+    .use-case-card img {
       width: 100%;
       height: auto;
       display: block;
+    }
+
+    .floating-note {
+      position: absolute;
+      right: 18px;
+      bottom: 18px;
+      max-width: 230px;
+      padding: 14px 16px;
+      border-radius: 18px;
+      background: rgba(2, 6, 23, 0.82);
+      color: rgba(248, 250, 252, 0.92);
+      border: 1px solid rgba(248, 250, 252, 0.16);
+      box-shadow: 0 20px 50px rgba(2, 6, 23, 0.36);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+    }
+
+    .floating-note strong {
+      display: block;
+      color: #ffffff;
+      font-size: 0.86rem;
+      margin-bottom: 5px;
+    }
+
+    .floating-note span {
+      display: block;
+      color: rgba(226, 232, 240, 0.78);
+      font-size: 0.78rem;
+      line-height: 1.45;
+    }
+
+    .memory-strip {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .memory-card {
+      padding: 22px;
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+    }
+
+    .memory-card span {
+      display: block;
+      color: #0284c7;
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .memory-card strong {
+      display: block;
+      margin-top: 8px;
+      color: #0f172a;
+      font-size: 1.05rem;
+      letter-spacing: -0.025em;
+    }
+
+    .solution-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 24px;
+      align-items: stretch;
+      margin-top: 34px;
+    }
+
+    .solution-card {
+      padding: 30px;
+      border-radius: 28px;
+      background: #ffffff;
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      box-shadow: 0 22px 70px rgba(15, 23, 42, 0.08);
+    }
+
+    .solution-card h3 {
+      margin: 0;
+      color: #0f172a;
+      font-size: 1.45rem;
+      letter-spacing: -0.035em;
+    }
+
+    .solution-card p {
+      margin: 12px 0 0;
+      color: #475569;
+      line-height: 1.68;
+    }
+
+    .signal-list {
+      display: grid;
+      gap: 14px;
+      padding: 0;
+      margin: 22px 0 0;
+      list-style: none;
+    }
+
+    .signal-list li {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      color: #475569;
+      line-height: 1.55;
+    }
+
+    .signal-list li::before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      margin-top: 8px;
+      border-radius: 999px;
+      background: #38bdf8;
+      box-shadow: 0 0 0 5px rgba(56, 189, 248, 0.13);
+      flex: 0 0 auto;
     }
 
     .showcase-grid {
@@ -242,6 +443,12 @@
       border: 1px solid rgba(15, 23, 42, 0.1);
       background: #ffffff;
       box-shadow: 0 22px 60px rgba(15, 23, 42, 0.1);
+      transition: transform 240ms ease, box-shadow 240ms ease;
+    }
+
+    .showcase-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 30px 80px rgba(15, 23, 42, 0.14);
     }
 
     .showcase-card img {
@@ -266,7 +473,44 @@
       line-height: 1.58;
     }
 
-    .free-release-card {
+    .use-case-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 34px;
+    }
+
+    .use-case-card {
+      overflow: hidden;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.94);
+      border: 1px solid rgba(15, 23, 42, 0.08);
+      box-shadow: 0 18px 52px rgba(15, 23, 42, 0.08);
+    }
+
+    .use-case-card img {
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    .use-case-card div {
+      padding: 20px;
+    }
+
+    .use-case-card h3 {
+      margin: 0;
+      color: #0f172a;
+      font-size: 1.08rem;
+    }
+
+    .use-case-card p {
+      margin: 9px 0 0;
+      color: #64748b;
+      line-height: 1.55;
+      font-size: 0.95rem;
+    }
+
+    .launch-card {
       display: grid;
       grid-template-columns: 0.9fr 1.1fr;
       gap: 30px;
@@ -280,7 +524,7 @@
       box-shadow: 0 28px 90px rgba(2, 6, 23, 0.42);
     }
 
-    .free-release-copy h2 {
+    .launch-copy h2 {
       margin: 0;
       color: #f8fafc;
       font-size: clamp(2rem, 4.5vw, 3.4rem);
@@ -288,13 +532,13 @@
       letter-spacing: -0.055em;
     }
 
-    .free-release-copy p {
+    .launch-copy p {
       margin: 16px 0 0;
       color: rgba(226, 232, 240, 0.78);
       line-height: 1.7;
     }
 
-    .free-release-list {
+    .launch-list {
       display: grid;
       gap: 10px;
       padding: 0;
@@ -302,14 +546,14 @@
       list-style: none;
     }
 
-    .free-release-list li {
+    .launch-list li {
       display: flex;
       gap: 10px;
       align-items: center;
       color: rgba(248, 250, 252, 0.88);
     }
 
-    .free-release-list li::before {
+    .launch-list li::before {
       content: "✓";
       width: 22px;
       height: 22px;
@@ -324,32 +568,112 @@
       flex: 0 0 auto;
     }
 
-    .free-release-media {
+    .launch-media {
       overflow: hidden;
       border-radius: 24px;
       border: 1px solid rgba(250, 204, 21, 0.18);
       background: rgba(2, 6, 23, 0.72);
     }
 
-    @media (max-width: 900px) {
-      .free-release-card {
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 720ms ease, transform 720ms ease;
+      transition-delay: var(--reveal-delay, 0ms);
+      will-change: opacity, transform;
+    }
+
+    [data-reveal="left"] {
+      transform: translateX(-30px);
+    }
+
+    [data-reveal="right"] {
+      transform: translateX(30px);
+    }
+
+    [data-reveal].is-visible {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      [data-reveal],
+      [data-reveal="left"],
+      [data-reveal="right"] {
+        opacity: 1;
+        transform: none;
+        transition: none;
+      }
+
+      .showcase-card:hover,
+      .social-icon-link:hover {
+        transform: none;
+      }
+    }
+
+    @media (max-width: 980px) {
+      .memory-strip,
+      .use-case-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .solution-grid,
+      .launch-card {
         grid-template-columns: 1fr;
       }
     }
 
     @media (max-width: 760px) {
-      .showcase-grid {
+      .compare-grid,
+      .showcase-grid,
+      .memory-strip,
+      .use-case-grid {
         grid-template-columns: 1fr;
+      }
+
+      .floating-note {
+        position: static;
+        max-width: none;
+        margin-top: 10px;
+        border-radius: 16px;
       }
     }
 
     @media (max-width: 640px) {
+      .social-section {
+        padding: 46px 0;
+      }
+
+      .social-section-card {
+        padding: 26px 20px;
+        border-radius: 22px;
+      }
+
+      .social-section .social-icon-link {
+        width: 42px;
+        height: 42px;
+      }
+
+      .hero-proof {
+        gap: 8px;
+      }
+
+      .hero-proof span {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
       .hero-image-shell {
         border-radius: 22px;
         padding: 6px;
       }
 
-      .showcase-card {
+      .showcase-card,
+      .use-case-card {
         border-radius: 22px;
       }
 
@@ -357,12 +681,12 @@
         padding: 18px;
       }
 
-      .free-release-card {
+      .solution-card,
+      .launch-card {
         padding: 20px;
         border-radius: 24px;
       }
     }
-
   </style>
 </head>
 
@@ -378,43 +702,54 @@
 
       <nav class="nav-links" aria-label="Main navigation">
         <a href="#features">Features</a>
+        <a href="#showcase">App Preview</a>
         <a href="#how-it-works">How It Works</a>
         <a href="#why-auracache">Why AuraCache</a>
         <a href="#faq">FAQ</a>
       </nav>
 
-      <a class="nav-cta" href="#free-release">Explore AuraCache Free</a>
+      <a class="nav-cta" href="#launch-preview">Discover AuraCache</a>
     </div>
   </header>
 
   <main id="top">
     <section class="hero">
       <div class="container hero-grid">
-        <div>
+        <div data-reveal="left">
           <div class="eyebrow">
             <span class="eyebrow-dot"></span>
-            AuraCache Free Release
+            Action-based link memory
           </div>
 
           <h1>Save links. Turn them into action.</h1>
 
           <p class="hero-lead">
-            Keep products, articles, videos, and ideas organized in one smart dashboard. Save what matters, find it faster, and revisit it at the right time.
+            AuraCache helps you save useful links from products, articles, videos, social posts, and ideas — then organize and revisit them when the time is right.
           </p>
 
           <div class="hero-actions">
-            <a class="btn btn-primary" href="#free-release">Explore AuraCache Free</a>
-            <a class="btn btn-secondary" href="#features">See Free Features</a>
+            <a class="btn btn-primary" href="#showcase">Explore the App</a>
+            <a class="btn btn-secondary" href="#how-it-works">See How It Works</a>
+          </div>
+
+          <div class="hero-proof" aria-label="AuraCache highlights">
+            <span>Save from anywhere</span>
+            <span>Organize by intent</span>
+            <span>Return with reminders</span>
           </div>
 
           <p class="hero-note">
-            Built for free link saving, simple organization, reminders, shopping access, and privacy-first control.
+            Built for clean link saving, focused organization, reminders, shopping finds, and privacy-first control.
           </p>
         </div>
 
-        <div class="hero-visual" aria-label="AuraCache Free product preview">
+        <div class="hero-visual" aria-label="AuraCache product preview" data-reveal="right">
           <div class="hero-image-shell">
-            <img src="images/auracache-free-hero.png" alt="AuraCache Free dashboard preview showing saved links, reminders, and organized content" loading="eager" decoding="async">
+            <img src="images/auracache-free-hero.png" alt="AuraCache dashboard preview showing saved links, reminders, and organized content" loading="eager" decoding="async">
+            <div class="floating-note" aria-hidden="true">
+              <strong>Saved for later?</strong>
+              <span>AuraCache helps bring important links back when they still matter.</span>
+            </div>
           </div>
         </div>
       </div>
@@ -422,57 +757,113 @@
 
     <section class="section section-soft">
       <div class="container">
-        <div class="problem-card">
+        <div class="problem-card" data-reveal>
           <div class="kicker">The Problem</div>
           <h2>Saving is easy. Coming back later is the hard part.</h2>
           <p>
-            Most saved links become digital clutter. AuraCache is built to help saved content become organized, remembered, and useful again.
+            Tabs get buried, screenshots disappear, and bookmarks turn into clutter. AuraCache is built for people who save links with a reason — and want those links to stay useful.
           </p>
+
+          <div class="memory-strip">
+            <div class="memory-card" style="--reveal-delay: 80ms;" data-reveal>
+              <span>Products</span>
+              <strong>Revisit shopping finds before they are forgotten.</strong>
+            </div>
+            <div class="memory-card" style="--reveal-delay: 140ms;" data-reveal>
+              <span>Reading</span>
+              <strong>Keep articles ready for the right moment.</strong>
+            </div>
+            <div class="memory-card" style="--reveal-delay: 200ms;" data-reveal>
+              <span>Videos</span>
+              <strong>Save content you actually want to watch later.</strong>
+            </div>
+            <div class="memory-card" style="--reveal-delay: 260ms;" data-reveal>
+              <span>Ideas</span>
+              <strong>Turn scattered inspiration into organized action.</strong>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
+    <section class="section section-white" id="solution">
+      <div class="container">
+        <div class="section-header center" data-reveal>
+          <div class="kicker">The Solution</div>
+          <h2>A smarter home for the links you mean to use later.</h2>
+          <p>
+            AuraCache connects saving, organizing, and remembering into one simple flow — so a saved link can become a useful next step.
+          </p>
+        </div>
+
+        <div class="solution-grid">
+          <article class="solution-card" data-reveal="left">
+            <h3>Designed around intent, not clutter.</h3>
+            <p>
+              Every saved link has a reason behind it: compare a product, finish a video, read an article, revisit a social post, or keep an idea alive.
+            </p>
+            <ul class="signal-list">
+              <li>Save links from browsers, apps, marketplaces, and content platforms.</li>
+              <li>Keep practical categories for shopping, videos, articles, work, ideas, and more.</li>
+              <li>Add reminders so useful links return when they can still help.</li>
+            </ul>
+          </article>
+
+          <article class="solution-card" data-reveal="right">
+            <h3>Quiet structure for a noisy internet.</h3>
+            <p>
+              AuraCache keeps the experience focused. Instead of another endless feed, it gives you a clean place to collect, review, and act on what you already decided was worth saving.
+            </p>
+            <ul class="signal-list">
+              <li>Clean dashboard for saved links and organized content.</li>
+              <li>Clear titles and categories so links are easier to understand later.</li>
+              <li>Simple controls for reminders, privacy, and your saved library.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
 
     <section class="section section-white" id="showcase">
       <div class="container">
-        <div class="section-header center">
-          <div class="kicker">AuraCache Free</div>
-          <h2>Free tools for links you actually want to use later.</h2>
+        <div class="section-header center" data-reveal>
+          <div class="kicker">App Preview</div>
+          <h2>Built for the links you actually want to use.</h2>
           <p>
-            These website visuals focus only on the current free experience: saving, organizing, searching, shopping access, reminders, and control.
+            Save products, videos, articles, social posts, and ideas in a focused app experience made for returning later with purpose.
           </p>
         </div>
 
         <div class="showcase-grid">
-          <article class="showcase-card">
-            <img src="images/auracache-saved-links.png" alt="AuraCache saved links view with products, articles, and social posts" loading="lazy" decoding="async">
+          <article class="showcase-card" style="--reveal-delay: 80ms;" data-reveal>
+            <img src="images/auracache-saved-links.png" alt="AuraCache saved links view with products, articles, videos, and social posts" loading="lazy" decoding="async">
             <div class="showcase-card-body">
               <h3>Find what matters faster.</h3>
               <p>Browse saved links, products, articles, and social posts in one clean view.</p>
             </div>
           </article>
 
-          <article class="showcase-card">
+          <article class="showcase-card" style="--reveal-delay: 140ms;" data-reveal>
             <img src="images/auracache-reminders-tasks.png" alt="AuraCache reminders and scheduled tasks view" loading="lazy" decoding="async">
             <div class="showcase-card-body">
               <h3>Turn links into scheduled tasks.</h3>
-              <p>Create reminders and revisit saved links at the right time.</p>
+              <p>Create reminders and revisit saved links when they become useful again.</p>
             </div>
           </article>
 
-          <article class="showcase-card">
+          <article class="showcase-card" style="--reveal-delay: 200ms;" data-reveal>
             <img src="images/auracache-shopping.png" alt="AuraCache saved shopping products view" loading="lazy" decoding="async">
             <div class="showcase-card-body">
-              <h3>Revisit shopping finds instantly.</h3>
-              <p>Keep product links ready for search and one-tap product access.</p>
+              <h3>Keep shopping finds ready.</h3>
+              <p>Save product pages and return to them without losing the original context.</p>
             </div>
           </article>
 
-          <article class="showcase-card">
-            <img src="images/auracache-control-center.png" alt="AuraCache control center with language, reminder, and Guardian settings" loading="lazy" decoding="async">
+          <article class="showcase-card" style="--reveal-delay: 260ms;" data-reveal>
+            <img src="images/auracache-control-center.png" alt="AuraCache settings and control center view" loading="lazy" decoding="async">
             <div class="showcase-card-body">
               <h3>Stay in control.</h3>
-              <p>Manage language, reminders, Guardian settings, security, and privacy controls in one place.</p>
+              <p>Manage language, reminders, privacy settings, and saved content controls in one place.</p>
             </div>
           </article>
         </div>
@@ -481,7 +872,7 @@
 
     <section class="section section-white" id="features">
       <div class="container">
-        <div class="section-header center">
+        <div class="section-header center" data-reveal>
           <div class="kicker">Core Features</div>
           <h2>Everything you save should have a next step.</h2>
           <p>
@@ -490,7 +881,7 @@
         </div>
 
         <div class="feature-grid">
-          <article class="feature-card">
+          <article class="feature-card" style="--reveal-delay: 60ms;" data-reveal>
             <div class="feature-icon">01</div>
             <h3>Reminders</h3>
             <p>
@@ -498,7 +889,7 @@
             </p>
           </article>
 
-          <article class="feature-card">
+          <article class="feature-card" style="--reveal-delay: 120ms;" data-reveal>
             <div class="feature-icon">02</div>
             <h3>Clean Organization</h3>
             <p>
@@ -506,7 +897,7 @@
             </p>
           </article>
 
-          <article class="feature-card">
+          <article class="feature-card" style="--reveal-delay: 180ms;" data-reveal>
             <div class="feature-icon">03</div>
             <h3>Share & Save</h3>
             <p>
@@ -514,7 +905,7 @@
             </p>
           </article>
 
-          <article class="feature-card">
+          <article class="feature-card" style="--reveal-delay: 240ms;" data-reveal>
             <div class="feature-icon">04</div>
             <h3>Privacy-First Control</h3>
             <p>
@@ -522,7 +913,7 @@
             </p>
           </article>
 
-          <article class="feature-card">
+          <article class="feature-card" style="--reveal-delay: 300ms;" data-reveal>
             <div class="feature-icon">05</div>
             <h3>Shopping Access</h3>
             <p>
@@ -530,7 +921,7 @@
             </p>
           </article>
 
-          <article class="feature-card">
+          <article class="feature-card" style="--reveal-delay: 360ms;" data-reveal>
             <div class="feature-icon">06</div>
             <h3>Action-Based Saving</h3>
             <p>
@@ -543,7 +934,7 @@
 
     <section class="section section-dark" id="how-it-works">
       <div class="container">
-        <div class="section-header center">
+        <div class="section-header center" data-reveal>
           <div class="kicker">How It Works</div>
           <h2>From saved link to useful action.</h2>
           <p>
@@ -552,7 +943,7 @@
         </div>
 
         <div class="steps">
-          <article class="step-card">
+          <article class="step-card" style="--reveal-delay: 80ms;" data-reveal>
             <div class="step-number">1</div>
             <h3>Save</h3>
             <p>
@@ -560,28 +951,66 @@
             </p>
           </article>
 
-          <article class="step-card">
+          <article class="step-card" style="--reveal-delay: 160ms;" data-reveal>
             <div class="step-number">2</div>
             <h3>Organize</h3>
             <p>
-              AuraCache organizes saved content by intent and context.
+              Keep saved content grouped by intent, category, and context.
             </p>
           </article>
 
-          <article class="step-card">
+          <article class="step-card" style="--reveal-delay: 240ms;" data-reveal>
             <div class="step-number">3</div>
-            <h3>Remind</h3>
+            <h3>Remember</h3>
             <p>
-              Get reminders when the content becomes useful again.
+              Set reminders so important links do not disappear into digital clutter.
             </p>
           </article>
 
-          <article class="step-card">
+          <article class="step-card" style="--reveal-delay: 320ms;" data-reveal>
             <div class="step-number">4</div>
-            <h3>Revisit</h3>
+            <h3>Act</h3>
             <p>
-              Watch, read, compare, or complete what you saved.
+              Watch, read, compare, buy, research, or complete what you saved.
             </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="use-cases">
+      <div class="container">
+        <div class="section-header center" data-reveal>
+          <div class="kicker">Use Cases</div>
+          <h2>One place for the links scattered across your day.</h2>
+          <p>
+            AuraCache is made for the content people save with real intention — from product finds to research links and ideas worth revisiting.
+          </p>
+        </div>
+
+        <div class="use-case-grid">
+          <article class="use-case-card" style="--reveal-delay: 80ms;" data-reveal>
+            <img src="images/auracache-shopping.png" alt="Saved shopping links and product pages in AuraCache" loading="lazy" decoding="async">
+            <div>
+              <h3>Shopping finds</h3>
+              <p>Keep product pages ready for comparison, research, and later decisions.</p>
+            </div>
+          </article>
+
+          <article class="use-case-card" style="--reveal-delay: 160ms;" data-reveal>
+            <img src="images/auracache-saved-links.png" alt="Saved articles, videos, and social content in AuraCache" loading="lazy" decoding="async">
+            <div>
+              <h3>Content to revisit</h3>
+              <p>Save videos, articles, social posts, and references without losing context.</p>
+            </div>
+          </article>
+
+          <article class="use-case-card" style="--reveal-delay: 240ms;" data-reveal>
+            <img src="images/auracache-reminders-tasks.png" alt="Saved link reminders and follow-up tasks in AuraCache" loading="lazy" decoding="async">
+            <div>
+              <h3>Follow-up tasks</h3>
+              <p>Attach a next step to saved links so they can move from memory to action.</p>
+            </div>
           </article>
         </div>
       </div>
@@ -589,7 +1018,7 @@
 
     <section class="section section-white" id="why-auracache">
       <div class="container">
-        <div class="section-header center">
+        <div class="section-header center" data-reveal>
           <div class="kicker">Why AuraCache</div>
           <h2>Bookmarks save links. AuraCache brings them back.</h2>
           <p>
@@ -598,7 +1027,7 @@
         </div>
 
         <div class="compare-grid">
-          <article class="compare-card">
+          <article class="compare-card" data-reveal="left">
             <h3>Typical bookmarks</h3>
             <ul class="compare-list">
               <li>
@@ -607,7 +1036,7 @@
               </li>
               <li>
                 <span class="compare-marker">×</span>
-                <span>No reminder system.</span>
+                <span>No built-in reminder flow.</span>
               </li>
               <li>
                 <span class="compare-marker">×</span>
@@ -620,7 +1049,7 @@
             </ul>
           </article>
 
-          <article class="compare-card">
+          <article class="compare-card" data-reveal="right">
             <h3>AuraCache</h3>
             <ul class="compare-list">
               <li>
@@ -629,11 +1058,11 @@
               </li>
               <li>
                 <span class="compare-marker">✓</span>
-                <span>Smart reminders for useful resurfacing.</span>
+                <span>Reminders for useful resurfacing.</span>
               </li>
               <li>
                 <span class="compare-marker">✓</span>
-                <span>Smart categories and organization.</span>
+                <span>Clear categories and focused organization.</span>
               </li>
               <li>
                 <span class="compare-marker">✓</span>
@@ -645,17 +1074,17 @@
       </div>
     </section>
 
-    <section class="section section-dark" id="free-release">
+    <section class="section section-dark" id="launch-preview">
       <div class="container">
-        <div class="free-release-card">
-          <div class="free-release-copy">
-            <div class="kicker">Free Release</div>
-            <h2>Start with AuraCache Free.</h2>
+        <div class="launch-card" data-reveal>
+          <div class="launch-copy">
+            <div class="kicker">Launch Preview</div>
+            <h2>Your saved links are about to get a memory system.</h2>
             <p>
-              Save links, organize them, revisit products, and set reminders today. Advanced features are planned for a later update, but the current website focuses only on the free experience.
+              AuraCache is being shaped for people who save links with intention. Keep your useful pages organized, revisit them with reminders, and turn scattered content into something you can act on.
             </p>
 
-            <ul class="free-release-list">
+            <ul class="launch-list">
               <li>Save links quickly</li>
               <li>Keep shopping finds ready</li>
               <li>Create reminders</li>
@@ -663,13 +1092,13 @@
             </ul>
 
             <div class="hero-actions" style="margin-top: 24px;">
-              <a class="btn btn-primary" href="#features">Explore Free Features</a>
+              <a class="btn btn-primary" href="#features">Explore Features</a>
               <a class="btn btn-secondary" href="#showcase">View Screens</a>
             </div>
           </div>
 
-          <div class="free-release-media">
-            <img src="images/auracache-free-release.png" alt="AuraCache Free release preview with free link saving, shopping, reminders, and control" loading="lazy" decoding="async">
+          <div class="launch-media">
+            <img src="images/auracache-free-release.png" alt="AuraCache app preview with link saving, shopping, reminders, and control" loading="lazy" decoding="async">
           </div>
         </div>
       </div>
@@ -677,37 +1106,35 @@
 
     <section class="section section-soft" id="faq">
       <div class="container">
-        <div class="section-header center">
+        <div class="section-header center" data-reveal>
           <div class="kicker">FAQ</div>
-          <h2>Quick answers for the free release.</h2>
+          <h2>Quick answers about AuraCache.</h2>
         </div>
 
         <div class="faq-grid">
-          <article class="faq-item">
+          <article class="faq-item" style="--reveal-delay: 80ms;" data-reveal>
             <h3>What can I use AuraCache for?</h3>
             <p>
               AuraCache helps you save useful links, organize them, and revisit products, articles, videos, social posts, and ideas later.
             </p>
           </article>
 
-          <article class="faq-item">
-            <h3>Is AuraCache Free the current focus?</h3>
+          <article class="faq-item" style="--reveal-delay: 160ms;" data-reveal>
+            <h3>How is AuraCache different from bookmarks?</h3>
             <p>
-              Yes. The current public website focuses on the free experience: link saving, organization, shopping access, reminders, and user control.
+              Bookmarks store pages. AuraCache helps you remember why you saved something and brings it back later when it matters.
             </p>
           </article>
 
-
-
-          <article class="faq-item">
-            <h3>Why not just use bookmarks?</h3>
+          <article class="faq-item" style="--reveal-delay: 240ms;" data-reveal>
+            <h3>Can I use reminders?</h3>
             <p>
-              Bookmarks store links. AuraCache helps you remember why you saved something and brings it back later when it matters.
+              Yes. AuraCache is designed to help saved content return as a follow-up instead of sitting forgotten in a browser folder.
             </p>
           </article>
 
-          <article class="faq-item">
-            <h3>Does AuraCache store my links securely?</h3>
+          <article class="faq-item" style="--reveal-delay: 320ms;" data-reveal>
+            <h3>Is AuraCache privacy focused?</h3>
             <p>
               AuraCache is designed with user control, local-first behavior, and secure handling of saved content.
             </p>
@@ -719,7 +1146,7 @@
 
   <section class="social-section" id="social">
     <div class="container">
-      <div class="social-section-card">
+      <div class="social-section-card" data-reveal>
         <div class="kicker">Follow AuraCache</div>
         <h2>Follow the AuraCache journey.</h2>
         <p>
@@ -790,9 +1217,10 @@
           <div class="footer-title">Product</div>
           <div class="footer-links">
             <a href="#features">Features</a>
+            <a href="#showcase">App Preview</a>
             <a href="#how-it-works">How It Works</a>
             <a href="#why-auracache">Why AuraCache</a>
-                <a href="#faq">FAQ</a>
+            <a href="#faq">FAQ</a>
           </div>
         </div>
 
@@ -818,5 +1246,34 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      var revealItems = document.querySelectorAll('[data-reveal]');
+
+      if (!('IntersectionObserver' in window)) {
+        revealItems.forEach(function (item) {
+          item.classList.add('is-visible');
+        });
+        return;
+      }
+
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.16,
+        rootMargin: '0px 0px -8% 0px'
+      });
+
+      revealItems.forEach(function (item) {
+        observer.observe(item);
+      });
+    })();
+  </script>
 </body>
 </html>
