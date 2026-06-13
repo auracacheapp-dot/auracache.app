@@ -4,38 +4,47 @@
 <meta charset="utf-8"/>
 <title>AuraCache — Save, organize, and revisit useful links</title>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="AuraCache helps you save and organize social posts, shopping products, study resources, articles, videos, movie and series links, and more." name="description"/>
-<meta content="AuraCache, save links, link organizer, bookmark manager, link reminders, read later app, productivity app, save articles, save videos, save product links" name="keywords"/>
+<meta content="AuraCache helps you save and organize social posts, shopping products, study resources, articles, videos, movie and series links, and more with smart reminders." name="description"/>
+<meta content="AuraCache, save links, link organizer, bookmark manager, link reminders, read later app, productivity app, save articles, save videos, save product links, shopping shelf, local summaries" name="keywords"/>
 <meta content="index, follow" name="robots"/>
 <link href="https://auracache.app/" rel="canonical"/>
+
+<!-- Open Graph / SEO -->
 <meta content="website" property="og:type"/>
 <meta content="AuraCache" property="og:site_name"/>
 <meta content="https://auracache.app/" property="og:url"/>
 <meta content="AuraCache — Save links. Turn them into action." property="og:title"/>
-<meta content="Save social posts, products, study resources, articles, videos, movie and series links, and revisit them later." property="og:description"/>
+<meta content="Save social posts, products, study resources, articles, videos, movie and series links, and revisit them later with smart reminders and local summaries." property="og:description"/>
 <meta content="https://auracache.app/og-image.png" property="og:image"/>
+
+<!-- Twitter -->
 <meta content="summary_large_image" name="twitter:card"/>
 <meta content="AuraCache — Save links. Turn them into action." name="twitter:title"/>
 <meta content="A focused link organizer for social posts, shopping, study resources, articles, videos, movies, series, and more." name="twitter:description"/>
 <meta content="https://auracache.app/og-image.png" name="twitter:image"/>
+
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-YW6B66FDKB"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-YW6B66FDKB');
-  </script>
+</script>
+
 <link href="favicon.ico" rel="icon" sizes="any"/>
 <link href="favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
 <link href="favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
 <link href="apple-touch-icon.png" rel="apple-touch-icon"/>
 <link href="site.webmanifest" rel="manifest"/>
-<meta content="#070a12" name="theme-color"/>
+<meta content="#030014" name="theme-color"/>
+
+<!-- Google Fonts (Modern Tipografi) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 <link href="style.css" rel="stylesheet"/>
+
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -52,710 +61,14 @@
       "url": "https://auracache.app/"
     }
   }
-  </script>
-<style>
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      overflow-x: hidden;
-    }
-
-    section[id] {
-      scroll-margin-top: 110px;
-    }
-
-    img {
-      max-width: 100%;
-    }
-
-    .site-header {
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-    }
-
-    .brand-mark {
-      overflow: hidden;
-      box-shadow: 0 12px 30px rgba(56, 189, 248, 0.22);
-    }
-
-    .nav-cta {
-      white-space: nowrap;
-    }
-
-    .hero {
-      position: relative;
-      isolation: isolate;
-      overflow: hidden;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: -20% -10% auto -10%;
-      height: 680px;
-      background:
-        radial-gradient(circle at 16% 22%, rgba(56, 189, 248, 0.24), transparent 34%),
-        radial-gradient(circle at 78% 16%, rgba(250, 204, 21, 0.18), transparent 32%),
-        radial-gradient(circle at 50% 72%, rgba(34, 197, 94, 0.12), transparent 36%);
-      pointer-events: none;
-      z-index: -1;
-    }
-
-    .hero-lead strong,
-    .section-header strong {
-      color: #0f172a;
-      font-weight: 800;
-    }
-
-    .hero-proof {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 22px;
-    }
-
-    .hero-proof span {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 9px 12px;
-      border: 1px solid rgba(148, 163, 184, 0.18);
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.72);
-      color: #475569;
-      font-size: 0.82rem;
-      font-weight: 700;
-      box-shadow: 0 14px 34px rgba(15, 23, 42, 0.07);
-    }
-
-    .hero-proof span::before {
-      content: "";
-      width: 7px;
-      height: 7px;
-      border-radius: 999px;
-      background: #38bdf8;
-      box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.12);
-    }
-
-    .social-icon-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 12px;
-    }
-
-    .social-icon-link {
-      width: 40px;
-      height: 40px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid rgba(248, 250, 252, 0.26);
-      border-radius: 14px;
-      background: rgba(248, 250, 252, 0.08);
-      color: #f8fafc;
-      text-decoration: none;
-      box-shadow: 0 10px 24px rgba(2, 6, 23, 0.22);
-      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, color 180ms ease, box-shadow 180ms ease;
-    }
-
-    .social-icon-link:hover {
-      transform: translateY(-2px);
-      color: #ffffff;
-      border-color: rgba(56, 189, 248, 0.72);
-      background: rgba(56, 189, 248, 0.18);
-      box-shadow: 0 14px 30px rgba(56, 189, 248, 0.16);
-    }
-
-    .social-icon-link svg {
-      width: 19px;
-      height: 19px;
-      display: block;
-    }
-
-    .site-footer .social-icon-link {
-      color: #f8fafc;
-    }
-
-    .social-section {
-      padding: 64px 0;
-      background:
-        radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.16), transparent 34%),
-        #070a12;
-      border-top: 1px solid rgba(148, 163, 184, 0.14);
-      border-bottom: 1px solid rgba(148, 163, 184, 0.12);
-    }
-
-    .social-section-card {
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 34px;
-      text-align: center;
-      border: 1px solid rgba(226, 232, 240, 0.12);
-      border-radius: 28px;
-      background: rgba(15, 23, 42, 0.72);
-      box-shadow: 0 26px 80px rgba(2, 6, 23, 0.42);
-    }
-
-    .social-section-card h2 {
-      margin: 0;
-      color: #f8fafc;
-      font-size: clamp(1.8rem, 4vw, 2.6rem);
-      letter-spacing: -0.045em;
-      line-height: 1.05;
-    }
-
-    .social-section-card p {
-      max-width: 560px;
-      margin: 14px auto 0;
-      color: rgba(226, 232, 240, 0.76);
-      line-height: 1.65;
-    }
-
-    .social-section .social-icon-links {
-      justify-content: center;
-      gap: 12px;
-      margin-top: 24px;
-    }
-
-    .social-section .social-icon-link {
-      width: 46px;
-      height: 46px;
-      color: #f8fafc;
-      background: rgba(248, 250, 252, 0.1);
-      border-color: rgba(248, 250, 252, 0.24);
-    }
-
-    .social-section .social-icon-link svg {
-      width: 21px;
-      height: 21px;
-    }
-
-    .compare-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 18px;
-      margin-top: 32px;
-    }
-
-    .compare-card {
-      padding: 28px;
-      border-radius: 24px;
-      border: 1px solid rgba(15, 23, 42, 0.1);
-      background: #ffffff;
-      box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
-    }
-
-    .compare-card h3 {
-      margin: 0 0 16px;
-      font-size: 1.35rem;
-      color: #0f172a;
-    }
-
-    .compare-list {
-      display: grid;
-      gap: 12px;
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .compare-list li {
-      display: flex;
-      gap: 10px;
-      color: #475569;
-      line-height: 1.5;
-    }
-
-    .compare-marker {
-      width: 22px;
-      height: 22px;
-      border-radius: 999px;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(56, 189, 248, 0.12);
-      color: #0284c7;
-      font-size: 0.8rem;
-      font-weight: 800;
-      flex: 0 0 auto;
-    }
-
-    .hero-image-shell {
-      position: relative;
-      width: min(100%, 760px);
-      margin: 0 auto;
-      padding: 10px;
-      border: 1px solid rgba(250, 204, 21, 0.22);
-      border-radius: 30px;
-      background:
-        radial-gradient(circle at 72% 30%, rgba(250, 204, 21, 0.18), transparent 36%),
-        rgba(15, 23, 42, 0.72);
-      box-shadow: 0 30px 90px rgba(2, 6, 23, 0.46);
-      overflow: hidden;
-    }
-
-    .hero-image-shell::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(255,255,255,0.12), transparent 42%, rgba(56,189,248,0.08));
-      pointer-events: none;
-    }
-
-    .hero-image-shell img,
-    .showcase-card img,
-    .launch-media img,
-    .use-case-card img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .floating-note {
-      position: absolute;
-      right: 18px;
-      bottom: 18px;
-      max-width: 230px;
-      padding: 14px 16px;
-      border-radius: 18px;
-      background: rgba(2, 6, 23, 0.82);
-      color: rgba(248, 250, 252, 0.92);
-      border: 1px solid rgba(248, 250, 252, 0.16);
-      box-shadow: 0 20px 50px rgba(2, 6, 23, 0.36);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
-    }
-
-    .floating-note strong {
-      display: block;
-      color: #ffffff;
-      font-size: 0.86rem;
-      margin-bottom: 5px;
-    }
-
-    .floating-note span {
-      display: block;
-      color: rgba(226, 232, 240, 0.78);
-      font-size: 0.78rem;
-      line-height: 1.45;
-    }
-
-    .memory-strip {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 16px;
-      margin-top: 28px;
-    }
-
-    .memory-card {
-      padding: 22px;
-      border-radius: 22px;
-      background: rgba(255, 255, 255, 0.88);
-      border: 1px solid rgba(15, 23, 42, 0.08);
-      box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
-    }
-
-    .memory-card span {
-      display: block;
-      color: #0284c7;
-      font-size: 0.78rem;
-      font-weight: 800;
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-    }
-
-    .memory-card strong {
-      display: block;
-      margin-top: 8px;
-      color: #0f172a;
-      font-size: 1.05rem;
-      letter-spacing: -0.025em;
-    }
-
-    .solution-grid {
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 24px;
-      align-items: stretch;
-      margin-top: 34px;
-    }
-
-    .solution-card {
-      padding: 30px;
-      border-radius: 28px;
-      background: #ffffff;
-      border: 1px solid rgba(15, 23, 42, 0.08);
-      box-shadow: 0 22px 70px rgba(15, 23, 42, 0.08);
-    }
-
-    .solution-card h3 {
-      margin: 0;
-      color: #0f172a;
-      font-size: 1.45rem;
-      letter-spacing: -0.035em;
-    }
-
-    .solution-card p {
-      margin: 12px 0 0;
-      color: #475569;
-      line-height: 1.68;
-    }
-
-    .signal-list {
-      display: grid;
-      gap: 14px;
-      padding: 0;
-      margin: 22px 0 0;
-      list-style: none;
-    }
-
-    .signal-list li {
-      display: flex;
-      gap: 12px;
-      align-items: flex-start;
-      color: #475569;
-      line-height: 1.55;
-    }
-
-    .signal-list li::before {
-      content: "";
-      width: 9px;
-      height: 9px;
-      margin-top: 8px;
-      border-radius: 999px;
-      background: #38bdf8;
-      box-shadow: 0 0 0 5px rgba(56, 189, 248, 0.13);
-      flex: 0 0 auto;
-    }
-
-    .showcase-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 22px;
-      margin-top: 34px;
-    }
-
-    .showcase-card {
-      overflow: hidden;
-      border-radius: 28px;
-      border: 1px solid rgba(15, 23, 42, 0.1);
-      background: #ffffff;
-      box-shadow: 0 22px 60px rgba(15, 23, 42, 0.1);
-      transition: transform 240ms ease, box-shadow 240ms ease;
-    }
-
-    .showcase-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 30px 80px rgba(15, 23, 42, 0.14);
-    }
-
-    .showcase-card img {
-      width: 100%;
-      height: auto !important;
-      max-height: none !important;
-      aspect-ratio: auto !important;
-      object-fit: contain !important;
-      object-position: center center !important;
-      background: #050505;
-      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
-    }
-
-    .showcase-card-body {
-      padding: 22px 24px 24px;
-    }
-
-    .showcase-card h3 {
-      margin: 0;
-      color: #0f172a;
-      font-size: 1.25rem;
-      letter-spacing: -0.025em;
-    }
-
-    .showcase-card p {
-      margin: 10px 0 0;
-      color: #475569;
-      line-height: 1.58;
-    }
-
-    .use-case-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 26px;
-      margin-top: 38px;
-    }
-
-    #use-cases .section-header h2 {
-      max-width: 920px;
-      margin-left: auto;
-      margin-right: auto;
-      font-size: clamp(2rem, 4vw, 3.05rem);
-      line-height: 1.08;
-      text-wrap: balance;
-    }
-
-    #use-cases .section-header p {
-      max-width: 760px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .use-case-card {
-      display: grid;
-      grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.72fr);
-      align-items: center;
-      overflow: hidden;
-      border-radius: 28px;
-      background: rgba(255, 255, 255, 0.96);
-      border: 1px solid rgba(15, 23, 42, 0.08);
-      box-shadow: 0 22px 64px rgba(15, 23, 42, 0.1);
-    }
-
-    .use-case-card:nth-child(even) {
-      grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.1fr);
-    }
-
-    .use-case-card:nth-child(even) .use-case-media {
-      order: 2;
-    }
-
-    .use-case-card:nth-child(even) .use-case-copy {
-      order: 1;
-    }
-
-    .use-case-media {
-      min-width: 0;
-      background: #050505;
-      border-right: 1px solid rgba(15, 23, 42, 0.08);
-    }
-
-    .use-case-card:nth-child(even) .use-case-media {
-      border-right: 0;
-      border-left: 1px solid rgba(15, 23, 42, 0.08);
-    }
-
-    .use-case-card img {
-      width: 100%;
-      height: auto !important;
-      max-height: none !important;
-      aspect-ratio: auto !important;
-      object-fit: contain !important;
-      object-position: center center !important;
-      display: block;
-      background: #050505;
-    }
-
-    .use-case-copy {
-      padding: clamp(24px, 4vw, 42px);
-    }
-
-    .use-case-copy .kicker {
-      margin-bottom: 12px;
-    }
-
-    .use-case-card h3 {
-      margin: 0;
-      color: #0f172a;
-      font-size: clamp(1.35rem, 2.4vw, 2rem);
-      line-height: 1.12;
-      letter-spacing: -0.04em;
-    }
-
-    .use-case-card p {
-      margin: 14px 0 0;
-      color: #64748b;
-      line-height: 1.65;
-      font-size: 1rem;
-    }
-
-    .use-case-points {
-      display: grid;
-      gap: 10px;
-      padding: 0;
-      margin: 20px 0 0;
-      list-style: none;
-    }
-
-    .use-case-points li {
-      display: flex;
-      gap: 10px;
-      align-items: flex-start;
-      color: #475569;
-      font-size: 0.94rem;
-      line-height: 1.48;
-    }
-
-    .use-case-points li::before {
-      content: "";
-      width: 8px;
-      height: 8px;
-      margin-top: 7px;
-      border-radius: 999px;
-      background: #facc15;
-      box-shadow: 0 0 0 4px rgba(250, 204, 21, 0.14);
-      flex: 0 0 auto;
-    }
-
-    [data-reveal] {
-      opacity: 0;
-      transform: translateY(28px);
-      transition: opacity 720ms ease, transform 720ms ease;
-      transition-delay: var(--reveal-delay, 0ms);
-      will-change: opacity, transform;
-    }
-
-    [data-reveal="left"] {
-      transform: translateX(-30px);
-    }
-
-    [data-reveal="right"] {
-      transform: translateX(30px);
-    }
-
-    [data-reveal].is-visible {
-      opacity: 1;
-      transform: translate(0, 0);
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      [data-reveal],
-      [data-reveal="left"],
-      [data-reveal="right"] {
-        opacity: 1;
-        transform: none;
-        transition: none;
-      }
-
-      .showcase-card:hover,
-      .social-icon-link:hover {
-        transform: none;
-      }
-    }
-
-    @media (max-width: 980px) {
-      .memory-strip {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .use-case-card,
-      .use-case-card:nth-child(even) {
-        grid-template-columns: 1fr;
-      }
-
-      .use-case-card:nth-child(even) .use-case-media,
-      .use-case-card:nth-child(even) .use-case-copy {
-        order: initial;
-      }
-
-      .use-case-media,
-      .use-case-card:nth-child(even) .use-case-media {
-        border-left: 0;
-        border-right: 0;
-        border-bottom: 1px solid rgba(15, 23, 42, 0.08);
-      }
-
-      .solution-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-
-    @media (max-width: 760px) {
-      .compare-grid,
-      .showcase-grid,
-      .memory-strip {
-        grid-template-columns: 1fr;
-      }
-
-      .floating-note {
-        position: static;
-        max-width: none;
-        margin-top: 10px;
-        border-radius: 16px;
-      }
-    }
-
-    @media (max-width: 640px) {
-      #use-cases .section-header h2 {
-        font-size: clamp(1.9rem, 8vw, 2.45rem);
-        line-height: 1.1;
-      }
-
-      .use-case-copy {
-        padding: 22px;
-      }
-      .social-section {
-        padding: 46px 0;
-      }
-
-      .social-section-card {
-        padding: 26px 20px;
-        border-radius: 22px;
-      }
-
-      .social-section .social-icon-link {
-        width: 42px;
-        height: 42px;
-      }
-
-      .hero-proof {
-        gap: 8px;
-      }
-
-      .hero-proof span {
-        width: 100%;
-        justify-content: flex-start;
-      }
-
-      .hero-image-shell {
-        border-radius: 22px;
-        padding: 6px;
-      }
-
-      .showcase-card,
-      .use-case-card {
-        border-radius: 22px;
-      }
-
-      .showcase-card-body {
-        padding: 18px;
-      }
-
-      .solution-card {
-        padding: 20px;
-        border-radius: 24px;
-      }
-    }
-  
-    .showcase-card-wide {
-      grid-column: 1 / -1;
-    }
-
-    .showcase-card-wide img {
-      width: 100%;
-      height: auto !important;
-      object-fit: contain !important;
-      background: #050505;
-    }
-
-    @media (max-width: 640px) {
-      .hero-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-visual {
-        width: 100%;
-        justify-self: stretch;
-      }
-    }
-</style>
+</script>
 </head>
 <body>
+
+<!-- Gözü yormayan Arka Plan Parıltıları (Aura Effects) -->
+<div class="aura-ambient aura-top"></div>
+<div class="aura-ambient aura-middle"></div>
+
 <header class="site-header">
 <div class="container nav">
 <a aria-label="AuraCache home" class="brand" href="#top">
@@ -765,34 +78,43 @@
 <span>AuraCache</span>
 </a>
 <nav aria-label="Main navigation" class="nav-links">
-
 <a href="#features">Features</a>
 <a href="#app-preview">App Preview</a>
 <a href="#how-it-works">How It Works</a>
 <a href="#why-auracache">Why AuraCache</a>
 <a href="#faq">FAQ</a>
 </nav>
-<a class="nav-cta" href="#app-preview">Explore AuraCache</a>
+<span class="nav-status-badge">
+    <span class="badge-dot"></span> Launching Soon
+</span>
 </div>
 </header>
+
 <main id="top">
+<!-- Hero Section (Giriş Alanı) -->
 <section class="hero">
 <div class="container hero-grid">
 <div data-reveal="left">
-<div class="eyebrow"><span class="eyebrow-dot"></span> Link organizer for everyday content</div>
-<h1>Save useful links. Find them when they matter.</h1>
-<p class="hero-lead">Keep social posts, shopping products, study resources, articles, videos, movie and series links, and other useful pages together in one organized place.</p>
-<div class="hero-actions">
-<a class="btn btn-primary" href="#app-preview">Explore AuraCache</a>
-<a class="btn btn-secondary" href="#features">See Features</a>
+<div class="eyebrow"><span class="eyebrow-dot"></span> Google Play Launch Impending</div>
+<h1>Save useful links. <br><span class="aura-text-gradient">Find them when they matter.</span></h1>
+<p class="hero-lead">AuraCache is a quiet, organized space for links you actually want to revisit. Social posts, shopping finds, articles, videos, and inspiration — categorized, sorted, and ready when you are.</p>
+
+<!-- E-posta Kayıt Formu (Lansman Duyurusu İçin) -->
+<div class="launch-form-container">
+  <form action="mailto:hello@auracache.app" method="post" enctype="text/plain" class="launch-form">
+    <input type="email" placeholder="Enter your email for launch updates..." required class="launch-input">
+    <button type="submit" class="btn btn-primary">Notify Me At Launch</button>
+  </form>
 </div>
+<p class="launch-subtext">Be the first to know when we are live on Google Play. Support: <a href="mailto:hello@auracache.app">hello@auracache.app</a></p>
+
 <div aria-label="AuraCache highlights" class="hero-proof">
-<span>Save from anywhere</span>
-<span>Organize by intent</span>
-<span>Return with reminders</span>
+<span>✓ Smart Link Saving</span>
+<span>✓ Dedicated Shopping Shelves</span>
+<span>✓ Time & Category Reminders</span>
 </div>
-<p class="hero-note">AuraCache works without AI. Optional supported API-key features can improve titles, descriptions, and summaries.</p>
 </div>
+
 <div aria-label="AuraCache product preview" class="hero-visual" data-reveal="right">
           <div class="premium-hero-showcase" aria-label="AuraCache app screen previews">
             <article class="premium-phone-card is-featured">
@@ -812,6 +134,7 @@
 </div>
 </section>
 
+<!-- Problem Section -->
 <section class="section section-soft">
 <div class="container">
 <div class="problem-card" data-reveal="">
@@ -841,7 +164,9 @@
 </div>
 </div>
 </section>
-<section class="section section-white" id="solution">
+
+<!-- Solution Section -->
+<section class="section section-dark" id="solution">
 <div class="container">
 <div class="section-header center" data-reveal="">
 <div class="kicker">The Solution</div>
@@ -876,7 +201,9 @@
 </div>
 </div>
 </section>
-<section class="section section-white" id="app-preview">
+
+<!-- App Preview Section -->
+<section class="section section-dark" id="app-preview">
 <div class="container">
 <div class="section-header center" data-reveal="">
 <div class="kicker">App Preview</div>
@@ -887,29 +214,31 @@
           <article class="preview-phone-card" data-reveal>
             <img src="images/auracache-home.jpg" alt="AuraCache Home screen">
             <h3>Home</h3>
-            <p>Saved links stay visual, organized, and easy to return to.</p>
+            <p>Saved links stay visual, organized, and easy to return to with customizable folders and drag & drop support.</p>
           </article>
 
           <article class="preview-phone-card" data-reveal>
             <img src="images/auracache-reminders.jpg" alt="AuraCache Reminders screen">
             <h3>Reminders</h3>
-            <p>Bring useful links back when they should be watched, read, compared, or completed.</p>
+            <p>Bring useful links back when they should be watched, read, compared, or completed. Features notification health checks.</p>
           </article>
 
           <article class="preview-phone-card" data-reveal>
             <img src="images/auracache-shop.jpg" alt="AuraCache Shopping screen">
             <h3>Shop</h3>
-            <p>Keep product links separate from general saves and compare them later.</p>
+            <p>Keep product links separate from general saves, categorized onto dedicated shelves like "To Buy" or "Price Tracking".</p>
           </article>
 
           <article class="preview-phone-card" data-reveal>
             <img src="images/auracache-profile.jpg" alt="AuraCache Profile settings screen">
             <h3>Profile</h3>
-            <p>Control language, reminder style, notification tone, and local-first AI options.</p>
+            <p>Control multi-language options (TR, EN, ES), voice select, dark/light theme, and biometric lock settings.</p>
           </article>
 </div>
 </div>
 </section>
+
+<!-- Bento Grid Features Section (Büyük Görsel Güncelleme) -->
 <section class="section section-white" id="features">
 <div class="container">
 <div class="section-header center" data-reveal="">
@@ -919,52 +248,67 @@
             AuraCache is designed to help saved links become useful again — not just stored and forgotten.
           </p>
 </div>
-<div class="feature-grid">
-<article class="feature-card" data-reveal="" style="--reveal-delay: 60ms;">
-<div class="feature-icon">01</div>
-<h3>Reminders</h3>
-<p>
-              Create reminders so useful products, articles, videos, and ideas are easier to revisit at the right time.
-            </p>
-</article>
-<article class="feature-card" data-reveal="" style="--reveal-delay: 120ms;">
-<div class="feature-icon">02</div>
-<h3>Clean Organization</h3>
-<p>
-              Keep saved content organized with practical categories for products, articles, videos, work links, and ideas.
-            </p>
-</article>
-<article class="feature-card" data-reveal="" style="--reveal-delay: 180ms;">
-<div class="feature-icon">03</div>
-<h3>Share &amp; Save</h3>
-<p>
-              Save useful links from browsers, apps, social platforms, marketplaces, and content sources into one focused space.
-            </p>
-</article>
-<article class="feature-card" data-reveal="" style="--reveal-delay: 240ms;">
-<div class="feature-icon">04</div>
-<h3>Privacy-First Control</h3>
-<p>
-              AuraCache is designed around user control, focused organization, and secure handling of saved content.
-            </p>
-</article>
-<article class="feature-card" data-reveal="" style="--reveal-delay: 300ms;">
-<div class="feature-icon">05</div>
-<h3>Shopping Access</h3>
-<p>
-              Keep product links ready so you can return to saved shopping finds without losing the original page.
-            </p>
-</article>
-<article class="feature-card" data-reveal="" style="--reveal-delay: 360ms;">
-<div class="feature-icon">06</div>
-<h3>Action-Based Saving</h3>
-<p>
-              Save once, organize clearly, and return to the links that still matter later.
-            </p>
-</article>
+
+<!-- Bento Grid Layout -->
+<div class="bento-grid-container">
+    
+    <!-- Card 1: Shopping Screens (Geniş Kart) -->
+    <div class="bento-card col-span-2" data-reveal="">
+        <div class="bento-badge amber">Shopping Shelf</div>
+        <h3>Dedicated Shopping Screen & Shelf System</h3>
+        <p>E-commerce links shouldn't clutter your main feed. AuraCache automatically separates product links from Amazon, Etsy, and other marketplaces. Organize them into custom shelves like "To Buy", "Buy Later", or "Price Tracking" with automatic metadata controls.</p>
+        <div class="simulated-shelf">
+            <span>🛒 To Buy</span>
+            <span>⏳ Buy Later</span>
+            <span class="active-shelf">📉 Price Tracking</span>
+        </div>
+    </div>
+
+    <!-- Card 2: Platform Metadata Normalization -->
+    <div class="bento-card" data-reveal="">
+        <div class="bento-badge indigo">Integration</div>
+        <h3>Clean Metadata Extraction</h3>
+        <p>We work specifically to extract clean titles, descriptions, and visual cards from platforms like Instagram, Facebook, Reddit, Pinterest, TikTok, Prime Video, and Netflix, ensuring stable canonical links.</p>
+    </div>
+
+    <!-- Card 3: AI-Supported Local Summaries -->
+    <div class="bento-card" data-reveal="">
+        <div class="bento-badge emerald">AI Local Summary</div>
+        <h3>Smart Local Summaries</h3>
+        <p>No noisy AI chatbots. AuraCache securely generates locally stored summaries of your links. Avoid generic summaries and get straightforward translations (TR, EN, ES) with simple, tech-free wording.</p>
+    </div>
+
+    <!-- Card 4: Folder & Custom Category Management (Geniş Kart) -->
+    <div class="bento-card col-span-2" data-reveal="">
+        <div class="bento-badge purple">Organization</div>
+        <h3>Folders with Drag & Drop Controls</h3>
+        <p>Manage your library using standard or custom folders. Easily assign colors and icons to your folders, and reorganize them instantly with smooth drag-and-drop mechanics to group your links by current context.</p>
+        <div class="simulated-chips">
+            <span style="background: rgba(99, 102, 241, 0.15); border-color: rgba(99,102,241,0.3);">📁 Research</span>
+            <span style="background: rgba(236, 72, 153, 0.15); border-color: rgba(236,72,153,0.3);">📁 Travel Ideas</span>
+            <span style="background: rgba(16, 185, 129, 0.15); border-color: rgba(16,185,129,0.3);">📁 Daily Reads</span>
+        </div>
+    </div>
+
+    <!-- Card 5: Smart Category Nudges -->
+    <div class="bento-card" data-reveal="">
+        <div class="bento-badge pink">Smart Nudges</div>
+        <h3>Category Dürtmeleri</h3>
+        <p>If you haven't checked a certain category in a while, AuraCache gives you non-intrusive category prompts like <em>"Check your travel ideas again"</em> or <em>"Review your saved recipes."</em></p>
+    </div>
+
+    <!-- Card 6: Absolute Reminders & Security -->
+    <div class="bento-card" data-reveal="">
+        <div class="bento-badge sky">Security & Alarms</div>
+        <h3>Precise Reminders & Vault</h3>
+        <p>Set date/time alarms for links with active status indicators. Rest easy knowing your library can be secured behind biometric vault locks (Fingerprint / Face ID) and wiped completely whenever you choose.</p>
+    </div>
+
 </div>
 </div>
 </section>
+
+<!-- How It Works Section -->
 <section class="section section-dark" id="how-it-works">
 <div class="container">
 <div class="section-header center" data-reveal="">
@@ -979,35 +323,36 @@
 <div class="step-number">1</div>
 <h3>Save</h3>
 <p>
-              Save links from apps, browsers, marketplaces, and social platforms.
+              Save links seamlessly from your favorite apps, browsers, and social networks.
             </p>
 </article>
 <article class="step-card" data-reveal="" style="--reveal-delay: 160ms;">
 <div class="step-number">2</div>
 <h3>Organize</h3>
 <p>
-              Keep saved content grouped by intent, category, and context.
+              Keep saved content grouped cleanly by categories, custom colors, and shelves.
             </p>
 </article>
 <article class="step-card" data-reveal="" style="--reveal-delay: 240ms;">
 <div class="step-number">3</div>
 <h3>Remember</h3>
 <p>
-              Set reminders so important links do not disappear into digital clutter.
+              Set active alarms or let category nudges quietly bring back what you saved.
             </p>
 </article>
 <article class="step-card" data-reveal="" style="--reveal-delay: 320ms;">
 <div class="step-number">4</div>
 <h3>Act</h3>
 <p>
-              Watch, read, compare, buy, research, or complete what you saved.
+              Read, shop, or research without getting distracted by endless feeds.
             </p>
 </article>
 </div>
 </div>
 </section>
 
-<section class="section section-white" id="why-auracache">
+<!-- Why AuraCache Section -->
+<section class="section class-white" id="why-auracache">
 <div class="container">
 <div class="section-header center" data-reveal="">
 <div class="kicker">Why AuraCache</div>
@@ -1047,15 +392,15 @@
 </li>
 <li>
 <span class="compare-marker">✓</span>
-<span>Reminders for useful resurfacing.</span>
+<span>Reminders and category nudges for useful resurfacing.</span>
 </li>
 <li>
 <span class="compare-marker">✓</span>
-<span>Clear categories and focused organization.</span>
+<span>Clear categories, custom folders, and shopping shelves.</span>
 </li>
 <li>
 <span class="compare-marker">✓</span>
-<span>Cross-platform saving in one focused space.</span>
+<span>Cross-platform saving in one quiet, focused space.</span>
 </li>
 </ul>
 </article>
@@ -1063,22 +408,41 @@
 </div>
 </section>
 
+<!-- FAQ Section -->
 <section class="section section-soft" id="faq">
 <div class="container">
 <div class="section-header center" data-reveal="">
 <div class="kicker">FAQ</div>
 <h2>Quick answers about AuraCache.</h2>
 </div>
-<div class="faq-grid"><article class="faq-item" data-reveal=""><h3>What can I save with AuraCache?</h3><p>You can save social posts, shopping products, study and homework resources, articles, videos, movie and series pages, recipes, travel ideas, and other useful links.</p></article><article class="faq-item" data-reveal=""><h3>Is AuraCache a social network or streaming service?</h3><p>No. AuraCache does not host social posts, movies, or series. It helps you save and organize links to content found on other websites and apps.</p></article><article class="faq-item" data-reveal=""><h3>Does AuraCache require AI?</h3><p>No. Core saving, organization, shopping, and reminder features work without AI. Optional supported API-key features can improve titles, descriptions, and summaries.</p></article><article class="faq-item" data-reveal=""><h3>How is AuraCache different from bookmarks?</h3><p>Bookmarks mainly store pages. AuraCache adds focused organization, shopping areas, and reminders so saved links are easier to understand and revisit.</p></article></div>
+<div class="faq-grid">
+<article class="faq-item" data-reveal="">
+    <h3>What can I save with AuraCache?</h3>
+    <p>You can save social posts (Instagram, TikTok, Reddit, etc.), shopping products (Amazon, Etsy, etc.), study and homework resources, articles, videos, Netflix or Prime Video links, recipes, and more.</p>
+</article>
+<article class="faq-item" data-reveal="">
+    <h3>Is AuraCache a social network or streaming service?</h3>
+    <p>No. AuraCache does not host social posts or video streams. It operates as a personal productivity assistant, helping you organize the links you collect from other applications.</p>
+</article>
+<article class="faq-item" data-reveal="">
+    <h3>Does AuraCache require AI to work?</h3>
+    <p>No. Core link saving, folder sorting, custom shopping shelves, and notifications run entirely locally. Optional AI integrations can be activated with custom keys to generate summaries and refine metadata.</p>
+</article>
+<article class="faq-item" data-reveal="">
+    <h3>How is AuraCache different from standard bookmarks?</h3>
+    <p>While bookmarks are static storage, AuraCache organizes by intent, separates shopping items, provides date/time reminders, and monitors notification permissions for continuous access.</p>
+</article>
+</div>
 </div>
 </section>
 </main>
+
 <section class="social-section" id="social">
 <div class="container">
 <div class="social-section-card" data-reveal="">
 <div class="kicker">Follow AuraCache</div>
-<h2>Follow AuraCache.</h2>
-<p>Follow AuraCache for product updates, release notes, and practical link-saving tips.</p>
+<h2>Stay Updated on Our Progress</h2>
+<p>Follow AuraCache for product updates, release notes, and practical link-saving tips as we prepare for our Google Play launch.</p>
 <div aria-label="AuraCache social media links" class="social-icon-links">
 <a aria-label="AuraCache on Instagram" class="social-icon-link" href="https://www.instagram.com/auracacheapp/" rel="noopener noreferrer" target="_blank" title="Instagram">
 <svg aria-hidden="true" viewbox="0 0 24 24">
@@ -1118,6 +482,7 @@
 </div>
 </div>
 </section>
+
 <footer class="site-footer">
 <div class="container">
 <div class="footer-grid">
@@ -1135,7 +500,6 @@
 <div>
 <div class="footer-title">Product</div>
 <div class="footer-links">
-
 <a href="#features">Features</a>
 <a href="#app-preview">App Preview</a>
 <a href="#how-it-works">How It Works</a>
@@ -1163,17 +527,16 @@
       </div>
 </div>
 </footer>
+
 <script>
     (function () {
       var revealItems = document.querySelectorAll('[data-reveal]');
-
       if (!('IntersectionObserver' in window)) {
         revealItems.forEach(function (item) {
           item.classList.add('is-visible');
         });
         return;
       }
-
       var observer = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
@@ -1182,14 +545,13 @@
           }
         });
       }, {
-        threshold: 0.16,
-        rootMargin: '0px 0px -8% 0px'
+        threshold: 0.12,
+        rootMargin: '0px 0px -5% 0px'
       });
-
       revealItems.forEach(function (item) {
         observer.observe(item);
       });
     })();
-  </script>
+</script>
 </body>
 </html>
