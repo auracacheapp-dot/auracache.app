@@ -1,51 +1,47 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<title>AuraCache — Save, organize, and revisit useful links</title>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="AuraCache helps you save and organize social posts, shopping products, study resources, articles, videos, movie and series links, and more with smart reminders." name="description"/>
-<meta content="AuraCache, save links, link organizer, bookmark manager, link reminders, read later app, productivity app, save articles, save videos, save product links, shopping shelf, local summaries" name="keywords"/>
-<meta content="index, follow" name="robots"/>
-<link href="https://auracache.app/" rel="canonical"/>
+  <meta charset="utf-8">
+  <title>AuraCache — Save, organize, and revisit useful links</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AuraCache helps you save, organize, and revisit useful links from social media, shopping, articles, videos, study resources, movie and series pages, and more.">
+  <meta name="keywords" content="AuraCache, save links, link organizer, bookmark manager, reminders, shopping links, read later app, productivity app">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://auracache.app/">
 
-<!-- Open Graph / SEO -->
-<meta content="website" property="og:type"/>
-<meta content="AuraCache" property="og:site_name"/>
-<meta content="https://auracache.app/" property="og:url"/>
-<meta content="AuraCache — Save links. Turn them into action." property="og:title"/>
-<meta content="Save social posts, products, study resources, articles, videos, movie and series links, and revisit them later with smart reminders and local summaries." property="og:description"/>
-<meta content="https://auracache.app/og-image.png" property="og:image"/>
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="AuraCache">
+  <meta property="og:url" content="https://auracache.app/">
+  <meta property="og:title" content="AuraCache — Save links. Find them when they matter.">
+  <meta property="og:description" content="A focused link organizer for useful links, reminders, shopping saves, articles, videos, and social content.">
+  <meta property="og:image" content="https://auracache.app/og-image.png">
 
-<!-- Twitter -->
-<meta content="summary_large_image" name="twitter:card"/>
-<meta content="AuraCache — Save links. Turn them into action." name="twitter:title"/>
-<meta content="A focused link organizer for social posts, shopping, study resources, articles, videos, movies, series, and more." name="twitter:description"/>
-<meta content="https://auracache.app/og-image.png" name="twitter:image"/>
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="AuraCache — Save links. Find them when they matter.">
+  <meta name="twitter:description" content="Save, organize, and revisit useful links in one focused app.">
+  <meta name="twitter:image" content="https://auracache.app/og-image.png">
 
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-YW6B66FDKB"></script>
-<script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YW6B66FDKB"></script>
+  <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
+    function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-YW6B66FDKB');
-</script>
+  </script>
 
-<link href="favicon.ico" rel="icon" sizes="any"/>
-<link href="favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
-<link href="favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
-<link href="apple-touch-icon.png" rel="apple-touch-icon"/>
-<link href="site.webmanifest" rel="manifest"/>
-<meta content="#030014" name="theme-color"/>
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
+  <meta name="theme-color" content="#05060b">
 
-<!-- Google Fonts (Modern Tipografi) -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 
-<link href="style.css" rel="stylesheet"/>
-
-<script type="application/ld+json">
+  <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "MobileApplication",
@@ -61,497 +57,317 @@
       "url": "https://auracache.app/"
     }
   }
-</script>
+  </script>
 </head>
+
 <body>
+  <div class="page-glow page-glow-one"></div>
+  <div class="page-glow page-glow-two"></div>
 
-<!-- Gözü yormayan Arka Plan Parıltıları (Aura Effects) -->
-<div class="aura-ambient aura-top"></div>
-<div class="aura-ambient aura-middle"></div>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#top" aria-label="AuraCache home">
+        <span class="brand-mark">
+          <img src="android-chrome-192x192.png" alt="" width="24" height="24">
+        </span>
+        <span>AuraCache</span>
+      </a>
 
-<header class="site-header">
-<div class="container nav">
-<a aria-label="AuraCache home" class="brand" href="#top">
-<span class="brand-mark">
-<img alt="" height="24" src="android-chrome-192x192.png" style="width:24px;height:24px;border-radius:8px;display:block;" width="24"/>
-</span>
-<span>AuraCache</span>
-</a>
-<nav aria-label="Main navigation" class="nav-links">
-<a href="#features">Features</a>
-<a href="#app-preview">App Preview</a>
-<a href="#how-it-works">How It Works</a>
-<a href="#why-auracache">Why AuraCache</a>
-<a href="#faq">FAQ</a>
-</nav>
-<span class="nav-status-badge">
-    <span class="badge-dot"></span> Launching Soon
-</span>
-</div>
-</header>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#features">Features</a>
+        <a href="#app-preview">App Preview</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#why-auracache">Why AuraCache</a>
+        <a href="#faq">FAQ</a>
+      </nav>
 
-<main id="top">
-<!-- Hero Section (Giriş Alanı) -->
-<section class="hero">
-<div class="container hero-grid">
-<div data-reveal="left">
-<div class="eyebrow"><span class="eyebrow-dot"></span> Google Play Launch Impending</div>
-<h1>Save useful links. <br><span class="aura-text-gradient">Find them when they matter.</span></h1>
-<p class="hero-lead">AuraCache is a quiet, organized space for links you actually want to revisit. Social posts, shopping finds, articles, videos, and inspiration — categorized, sorted, and ready when you are.</p>
+      <span class="nav-status"><span></span> Google Play release preparing</span>
+    </div>
+  </header>
 
-<!-- E-posta Kayıt Formu (Lansman Duyurusu İçin) -->
-<div class="launch-form-container">
-  <form action="mailto:hello@auracache.app" method="post" enctype="text/plain" class="launch-form">
-    <input type="email" placeholder="Enter your email for launch updates..." required class="launch-input">
-    <button type="submit" class="btn btn-primary">Notify Me At Launch</button>
-  </form>
-</div>
-<p class="launch-subtext">Be the first to know when we are live on Google Play. Support: <a href="mailto:hello@auracache.app">hello@auracache.app</a></p>
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy" data-reveal>
+          <div class="eyebrow"><span></span> Link organizer for everyday content</div>
+          <h1>Save useful links.<br><em>Find them when they matter.</em></h1>
+          <p class="hero-lead">
+            AuraCache keeps social posts, shopping products, study resources, articles, videos, movie and series pages, and other useful links in one focused place.
+          </p>
 
-<div aria-label="AuraCache highlights" class="hero-proof">
-<span>✓ Smart Link Saving</span>
-<span>✓ Dedicated Shopping Shelves</span>
-<span>✓ Time & Category Reminders</span>
-</div>
-</div>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#app-preview">Preview the App</a>
+            <a class="btn btn-secondary" href="#features">Explore Features</a>
+          </div>
 
-<div aria-label="AuraCache product preview" class="hero-visual" data-reveal="right">
-          <div class="premium-hero-showcase" aria-label="AuraCache app screen previews">
-            <article class="premium-phone-card is-featured">
-              <img src="images/auracache-home.jpg" alt="AuraCache Home screen with saved social and video links" loading="eager" decoding="async">
+          <p class="hero-note">
+            AuraCache is not a social network or streaming app. It helps you save and organize links to content found elsewhere.
+          </p>
+        </div>
+
+        <div class="hero-visual" data-reveal>
+          <div class="phone-stage" aria-label="AuraCache app screen previews">
+            <article class="phone-card phone-home">
+              <img src="images/auracache-home-premium.png" alt="AuraCache Home screen">
               <span>Home</span>
             </article>
-            <article class="premium-phone-card">
-              <img src="images/auracache-reminders.jpg" alt="AuraCache Reminders screen with saved content reminders" loading="eager" decoding="async">
+            <article class="phone-card phone-reminders">
+              <img src="images/auracache-reminders-premium.png" alt="AuraCache Reminders screen">
               <span>Reminders</span>
             </article>
-            <article class="premium-phone-card">
-              <img src="images/auracache-shop.jpg" alt="AuraCache Shopping screen with saved product links" loading="eager" decoding="async">
+            <article class="phone-card phone-shop">
+              <img src="images/auracache-shop-premium.png" alt="AuraCache Shopping screen">
               <span>Shop</span>
             </article>
           </div>
-</div>
-</div>
-</section>
-
-<!-- Problem Section -->
-<section class="section section-soft">
-<div class="container">
-<div class="problem-card" data-reveal="">
-<div class="kicker">The Problem</div>
-<h2>Saving is easy. Coming back later is the hard part.</h2>
-<p>
-            Tabs get buried, screenshots disappear, and bookmarks turn into clutter. AuraCache is built for people who save links with a reason — and want those links to stay useful.
-          </p>
-<div class="memory-strip">
-<div class="memory-card" data-reveal="" style="--reveal-delay: 80ms;">
-<span>Products</span>
-<strong>Revisit shopping finds before they are forgotten.</strong>
-</div>
-<div class="memory-card" data-reveal="" style="--reveal-delay: 140ms;">
-<span>Reading</span>
-<strong>Keep articles ready for the right moment.</strong>
-</div>
-<div class="memory-card" data-reveal="" style="--reveal-delay: 200ms;">
-<span>Videos</span>
-<strong>Save content you actually want to watch later.</strong>
-</div>
-<div class="memory-card" data-reveal="" style="--reveal-delay: 260ms;">
-<span>Ideas</span>
-<strong>Turn scattered inspiration into organized action.</strong>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- Solution Section -->
-<section class="section section-dark" id="solution">
-<div class="container">
-<div class="section-header center" data-reveal="">
-<div class="kicker">The Solution</div>
-<h2>A smarter home for the links you mean to use later.</h2>
-<p>
-            AuraCache connects saving, organizing, and remembering into one simple flow — so a saved link can become a useful next step.
-          </p>
-</div>
-<div class="solution-grid">
-<article class="solution-card" data-reveal="left">
-<h3>Designed around intent, not clutter.</h3>
-<p>
-              Every saved link has a reason behind it: compare a product, finish a video, read an article, revisit a social post, or keep an idea alive.
-            </p>
-<ul class="signal-list">
-<li>Save links from browsers, apps, marketplaces, and content platforms.</li>
-<li>Keep practical categories for shopping, videos, articles, work, ideas, and more.</li>
-<li>Add reminders so useful links return when they can still help.</li>
-</ul>
-</article>
-<article class="solution-card" data-reveal="right">
-<h3>Quiet structure for a noisy internet.</h3>
-<p>
-              AuraCache keeps the experience focused. Instead of another endless feed, it gives you a clean place to collect, review, and act on what you already decided was worth saving.
-            </p>
-<ul class="signal-list">
-<li>Clean dashboard for saved links and organized content.</li>
-<li>Clear titles and categories so links are easier to understand later.</li>
-<li>Simple controls for reminders, privacy, and your saved library.</li>
-</ul>
-</article>
-</div>
-</div>
-</section>
-
-<!-- App Preview Section -->
-<section class="section section-dark" id="app-preview">
-<div class="container">
-<div class="section-header center" data-reveal="">
-<div class="kicker">App Preview</div>
-<h2>One focused place for the links you save.</h2>
-<p>Home, reminders, shopping, and profile controls are designed around a consistent, easy-to-scan experience.</p>
-</div>
-<div class="showcase-grid">
-          <article class="preview-phone-card" data-reveal>
-            <img src="images/auracache-home.jpg" alt="AuraCache Home screen">
-            <h3>Home</h3>
-            <p>Saved links stay visual, organized, and easy to return to with customizable folders and drag & drop support.</p>
-          </article>
-
-          <article class="preview-phone-card" data-reveal>
-            <img src="images/auracache-reminders.jpg" alt="AuraCache Reminders screen">
-            <h3>Reminders</h3>
-            <p>Bring useful links back when they should be watched, read, compared, or completed. Features notification health checks.</p>
-          </article>
-
-          <article class="preview-phone-card" data-reveal>
-            <img src="images/auracache-shop.jpg" alt="AuraCache Shopping screen">
-            <h3>Shop</h3>
-            <p>Keep product links separate from general saves, categorized onto dedicated shelves like "To Buy" or "Price Tracking".</p>
-          </article>
-
-          <article class="preview-phone-card" data-reveal>
-            <img src="images/auracache-profile.jpg" alt="AuraCache Profile settings screen">
-            <h3>Profile</h3>
-            <p>Control multi-language options (TR, EN, ES), voice select, dark/light theme, and biometric lock settings.</p>
-          </article>
-</div>
-</div>
-</section>
-
-<!-- Bento Grid Features Section (Büyük Görsel Güncelleme) -->
-<section class="section section-white" id="features">
-<div class="container">
-<div class="section-header center" data-reveal="">
-<div class="kicker">Core Features</div>
-<h2>Everything you save should have a next step.</h2>
-<p>
-            AuraCache is designed to help saved links become useful again — not just stored and forgotten.
-          </p>
-</div>
-
-<!-- Bento Grid Layout -->
-<div class="bento-grid-container">
-    
-    <!-- Card 1: Shopping Screens (Geniş Kart) -->
-    <div class="bento-card col-span-2" data-reveal="">
-        <div class="bento-badge amber">Shopping Shelf</div>
-        <h3>Dedicated Shopping Screen & Shelf System</h3>
-        <p>E-commerce links shouldn't clutter your main feed. AuraCache automatically separates product links from Amazon, Etsy, and other marketplaces. Organize them into custom shelves like "To Buy", "Buy Later", or "Price Tracking" with automatic metadata controls.</p>
-        <div class="simulated-shelf">
-            <span>🛒 To Buy</span>
-            <span>⏳ Buy Later</span>
-            <span class="active-shelf">📉 Price Tracking</span>
         </div>
-    </div>
-
-    <!-- Card 2: Platform Metadata Normalization -->
-    <div class="bento-card" data-reveal="">
-        <div class="bento-badge indigo">Integration</div>
-        <h3>Clean Metadata Extraction</h3>
-        <p>We work specifically to extract clean titles, descriptions, and visual cards from platforms like Instagram, Facebook, Reddit, Pinterest, TikTok, Prime Video, and Netflix, ensuring stable canonical links.</p>
-    </div>
-
-    <!-- Card 3: AI-Supported Local Summaries -->
-    <div class="bento-card" data-reveal="">
-        <div class="bento-badge emerald">AI Local Summary</div>
-        <h3>Smart Local Summaries</h3>
-        <p>No noisy AI chatbots. AuraCache securely generates locally stored summaries of your links. Avoid generic summaries and get straightforward translations (TR, EN, ES) with simple, tech-free wording.</p>
-    </div>
-
-    <!-- Card 4: Folder & Custom Category Management (Geniş Kart) -->
-    <div class="bento-card col-span-2" data-reveal="">
-        <div class="bento-badge purple">Organization</div>
-        <h3>Folders with Drag & Drop Controls</h3>
-        <p>Manage your library using standard or custom folders. Easily assign colors and icons to your folders, and reorganize them instantly with smooth drag-and-drop mechanics to group your links by current context.</p>
-        <div class="simulated-chips">
-            <span style="background: rgba(99, 102, 241, 0.15); border-color: rgba(99,102,241,0.3);">📁 Research</span>
-            <span style="background: rgba(236, 72, 153, 0.15); border-color: rgba(236,72,153,0.3);">📁 Travel Ideas</span>
-            <span style="background: rgba(16, 185, 129, 0.15); border-color: rgba(16,185,129,0.3);">📁 Daily Reads</span>
-        </div>
-    </div>
-
-    <!-- Card 5: Smart Category Nudges -->
-    <div class="bento-card" data-reveal="">
-        <div class="bento-badge pink">Smart Nudges</div>
-        <h3>Category Dürtmeleri</h3>
-        <p>If you haven't checked a certain category in a while, AuraCache gives you non-intrusive category prompts like <em>"Check your travel ideas again"</em> or <em>"Review your saved recipes."</em></p>
-    </div>
-
-    <!-- Card 6: Absolute Reminders & Security -->
-    <div class="bento-card" data-reveal="">
-        <div class="bento-badge sky">Security & Alarms</div>
-        <h3>Precise Reminders & Vault</h3>
-        <p>Set date/time alarms for links with active status indicators. Rest easy knowing your library can be secured behind biometric vault locks (Fingerprint / Face ID) and wiped completely whenever you choose.</p>
-    </div>
-
-</div>
-</div>
-</section>
-
-<!-- How It Works Section -->
-<section class="section section-dark" id="how-it-works">
-<div class="container">
-<div class="section-header center" data-reveal="">
-<div class="kicker">How It Works</div>
-<h2>From saved link to useful action.</h2>
-<p>
-            AuraCache follows a simple flow: save, organize, remind, and revisit.
-          </p>
-</div>
-<div class="steps">
-<article class="step-card" data-reveal="" style="--reveal-delay: 80ms;">
-<div class="step-number">1</div>
-<h3>Save</h3>
-<p>
-              Save links seamlessly from your favorite apps, browsers, and social networks.
-            </p>
-</article>
-<article class="step-card" data-reveal="" style="--reveal-delay: 160ms;">
-<div class="step-number">2</div>
-<h3>Organize</h3>
-<p>
-              Keep saved content grouped cleanly by categories, custom colors, and shelves.
-            </p>
-</article>
-<article class="step-card" data-reveal="" style="--reveal-delay: 240ms;">
-<div class="step-number">3</div>
-<h3>Remember</h3>
-<p>
-              Set active alarms or let category nudges quietly bring back what you saved.
-            </p>
-</article>
-<article class="step-card" data-reveal="" style="--reveal-delay: 320ms;">
-<div class="step-number">4</div>
-<h3>Act</h3>
-<p>
-              Read, shop, or research without getting distracted by endless feeds.
-            </p>
-</article>
-</div>
-</div>
-</section>
-
-<!-- Why AuraCache Section -->
-<section class="section class-white" id="why-auracache">
-<div class="container">
-<div class="section-header center" data-reveal="">
-<div class="kicker">Why AuraCache</div>
-<h2>Bookmarks save links. AuraCache brings them back.</h2>
-<p>
-            Traditional bookmarks store pages. AuraCache is designed for people who save content for a reason.
-          </p>
-</div>
-<div class="compare-grid">
-<article class="compare-card" data-reveal="left">
-<h3>Typical bookmarks</h3>
-<ul class="compare-list">
-<li>
-<span class="compare-marker">×</span>
-<span>Save and forget inside static folders.</span>
-</li>
-<li>
-<span class="compare-marker">×</span>
-<span>No built-in reminder flow.</span>
-</li>
-<li>
-<span class="compare-marker">×</span>
-<span>No organization by intent or context.</span>
-</li>
-<li>
-<span class="compare-marker">×</span>
-<span>Browser-first storage that becomes clutter.</span>
-</li>
-</ul>
-</article>
-<article class="compare-card" data-reveal="right">
-<h3>AuraCache</h3>
-<ul class="compare-list">
-<li>
-<span class="compare-marker">✓</span>
-<span>Save and revisit with action-based memory.</span>
-</li>
-<li>
-<span class="compare-marker">✓</span>
-<span>Reminders and category nudges for useful resurfacing.</span>
-</li>
-<li>
-<span class="compare-marker">✓</span>
-<span>Clear categories, custom folders, and shopping shelves.</span>
-</li>
-<li>
-<span class="compare-marker">✓</span>
-<span>Cross-platform saving in one quiet, focused space.</span>
-</li>
-</ul>
-</article>
-</div>
-</div>
-</section>
-
-<!-- FAQ Section -->
-<section class="section section-soft" id="faq">
-<div class="container">
-<div class="section-header center" data-reveal="">
-<div class="kicker">FAQ</div>
-<h2>Quick answers about AuraCache.</h2>
-</div>
-<div class="faq-grid">
-<article class="faq-item" data-reveal="">
-    <h3>What can I save with AuraCache?</h3>
-    <p>You can save social posts (Instagram, TikTok, Reddit, etc.), shopping products (Amazon, Etsy, etc.), study and homework resources, articles, videos, Netflix or Prime Video links, recipes, and more.</p>
-</article>
-<article class="faq-item" data-reveal="">
-    <h3>Is AuraCache a social network or streaming service?</h3>
-    <p>No. AuraCache does not host social posts or video streams. It operates as a personal productivity assistant, helping you organize the links you collect from other applications.</p>
-</article>
-<article class="faq-item" data-reveal="">
-    <h3>Does AuraCache require AI to work?</h3>
-    <p>No. Core link saving, folder sorting, custom shopping shelves, and notifications run entirely locally. Optional AI integrations can be activated with custom keys to generate summaries and refine metadata.</p>
-</article>
-<article class="faq-item" data-reveal="">
-    <h3>How is AuraCache different from standard bookmarks?</h3>
-    <p>While bookmarks are static storage, AuraCache organizes by intent, separates shopping items, provides date/time reminders, and monitors notification permissions for continuous access.</p>
-</article>
-</div>
-</div>
-</section>
-</main>
-
-<section class="social-section" id="social">
-<div class="container">
-<div class="social-section-card" data-reveal="">
-<div class="kicker">Follow AuraCache</div>
-<h2>Stay Updated on Our Progress</h2>
-<p>Follow AuraCache for product updates, release notes, and practical link-saving tips as we prepare for our Google Play launch.</p>
-<div aria-label="AuraCache social media links" class="social-icon-links">
-<a aria-label="AuraCache on Instagram" class="social-icon-link" href="https://www.instagram.com/auracacheapp/" rel="noopener noreferrer" target="_blank" title="Instagram">
-<svg aria-hidden="true" viewbox="0 0 24 24">
-<rect fill="none" height="14" rx="4" stroke="currentColor" stroke-width="1.8" width="14" x="5" y="5"></rect>
-<circle cx="12" cy="12" fill="none" r="3.2" stroke="currentColor" stroke-width="1.8"></circle>
-<circle cx="16.6" cy="7.4" fill="currentColor" r="1.1"></circle>
-</svg>
-</a>
-<a aria-label="AuraCache on TikTok" class="social-icon-link" href="https://www.tiktok.com/@auracacheapp" rel="noopener noreferrer" target="_blank" title="TikTok">
-<svg aria-hidden="true" viewbox="0 0 24 24">
-<path d="M13.5 4v10.2a3.8 3.8 0 1 1-3.8-3.8" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.9"></path>
-<path d="M13.5 4c.8 2.7 2.5 4.2 5.1 4.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.9"></path>
-</svg>
-</a>
-<a aria-label="AuraCache on X" class="social-icon-link" href="https://x.com/auracacheapp" rel="noopener noreferrer" target="_blank" title="X / Twitter">
-<svg aria-hidden="true" viewbox="0 0 24 24">
-<path d="M5 5l14 14M19 5L5 19" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2.1"></path>
-</svg>
-</a>
-<a aria-label="AuraCache on YouTube" class="social-icon-link" href="https://www.youtube.com/@auracacheapp" rel="noopener noreferrer" target="_blank" title="YouTube">
-<svg aria-hidden="true" viewbox="0 0 24 24">
-<rect fill="none" height="10" rx="3" stroke="currentColor" stroke-width="1.8" width="16" x="4" y="7"></rect>
-<path d="M11 10l4 2-4 2v-4z" fill="currentColor"></path>
-</svg>
-</a>
-<a aria-label="AuraCache on Facebook" class="social-icon-link" href="https://www.facebook.com/profile.php?id=61588921036730" rel="noopener noreferrer" target="_blank" title="Facebook">
-<svg aria-hidden="true" viewbox="0 0 24 24">
-<path d="M14 8.2h2V5h-2.6c-2.8 0-4.2 1.7-4.2 4.2V11H7v3.1h2.2V20h3.4v-5.9h2.7l.5-3.1h-3.2V9.3c0-.7.4-1.1 1.4-1.1z" fill="currentColor"></path>
-</svg>
-</a>
-<a aria-label="AuraCache on Pinterest" class="social-icon-link" href="https://www.pinterest.com/auracacheapp/" rel="noopener noreferrer" target="_blank" title="Pinterest">
-<svg aria-hidden="true" viewbox="0 0 24 24">
-<path d="M12 4.5a7.1 7.1 0 0 0-2.4 13.8c-.1-.6-.2-1.5 0-2.1l.9-3.6s-.2-.5-.2-1.2c0-1.1.7-1.9 1.5-1.9.7 0 1.1.5 1.1 1.2 0 .7-.4 1.7-.7 2.6-.2.8.4 1.5 1.2 1.5 1.5 0 2.5-1.9 2.5-4.1 0-1.7-1.2-3-3.4-3-2.5 0-4 1.9-4 3.9 0 .7.2 1.2.5 1.6.1.2.2.3.1.5l-.2.8c-.1.3-.3.4-.6.3-1.1-.5-1.6-1.8-1.6-3.3 0-2.4 2-5.3 6.1-5.3 3.3 0 5.5 2.4 5.5 5 0 3.4-1.9 6-4.7 6-1 0-1.9-.5-2.2-1.1l-.6 2.2c-.2.8-.6 1.6-1 2.2A7.1 7.1 0 1 0 12 4.5z" fill="currentColor"></path>
-</svg>
-</a>
-</div>
-</div>
-</div>
-</section>
-
-<footer class="site-footer">
-<div class="container">
-<div class="footer-grid">
-<div>
-<a aria-label="AuraCache home" class="brand" href="#top">
-<span class="brand-mark">
-<img alt="" height="24" src="android-chrome-192x192.png" style="width:24px;height:24px;border-radius:8px;display:block;" width="24"/>
-</span>
-<span>AuraCache</span>
-</a>
-<p>
-            Save links. Turn them into action.
-          </p>
-</div>
-<div>
-<div class="footer-title">Product</div>
-<div class="footer-links">
-<a href="#features">Features</a>
-<a href="#app-preview">App Preview</a>
-<a href="#how-it-works">How It Works</a>
-<a href="#why-auracache">Why AuraCache</a>
-<a href="#faq">FAQ</a>
-</div>
-</div>
-<div>
-<div class="footer-title">Legal</div>
-<div class="footer-links">
-<a href="privacy.html">Privacy Policy</a>
-<a href="terms.html">Terms of Service</a>
-<a href="delete-account/">Delete Account</a>
-</div>
-</div>
-<div>
-<div class="footer-title">Contact</div>
-<div class="footer-links">
-<a href="mailto:hello@auracache.app">hello@auracache.app</a>
-</div>
-</div>
-</div>
-<div class="footer-bottom">
-        © 2026 AuraCache. All rights reserved.
       </div>
-</div>
-</footer>
+    </section>
 
-<script>
-    (function () {
-      var revealItems = document.querySelectorAll('[data-reveal]');
+    <section class="section section-soft">
+      <div class="container">
+        <div class="section-header center" data-reveal>
+          <div class="kicker">The Problem</div>
+          <h2>Saving is easy. Coming back later is the hard part.</h2>
+          <p>Tabs get buried, screenshots disappear, and bookmarks become clutter. AuraCache is built for links you save with a reason.</p>
+        </div>
+
+        <div class="memory-grid">
+          <article class="memory-card" data-reveal>
+            <span>Shopping</span>
+            <strong>Keep product finds ready before they are forgotten.</strong>
+          </article>
+          <article class="memory-card" data-reveal>
+            <span>Reading</span>
+            <strong>Return to articles and study resources at the right time.</strong>
+          </article>
+          <article class="memory-card" data-reveal>
+            <span>Videos</span>
+            <strong>Save content you actually want to watch later.</strong>
+          </article>
+          <article class="memory-card" data-reveal>
+            <span>Ideas</span>
+            <strong>Turn scattered inspiration into organized action.</strong>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="app-preview">
+      <div class="container">
+        <div class="section-header center" data-reveal>
+          <div class="kicker">App Preview</div>
+          <h2>Four focused spaces for saved links.</h2>
+          <p>Home, reminders, shopping, and profile settings are presented as separate, clean app areas instead of one oversized collage.</p>
+        </div>
+
+        <div class="preview-grid">
+          <article class="preview-card" data-reveal>
+            <img src="images/auracache-home-premium.png" alt="AuraCache Home screen">
+            <h3>Home</h3>
+            <p>Browse visual saved links, platforms, categories, and new items in one clean feed.</p>
+          </article>
+          <article class="preview-card" data-reveal>
+            <img src="images/auracache-reminders-premium.png" alt="AuraCache Reminders screen">
+            <h3>Reminders</h3>
+            <p>Bring links back when they should be watched, read, compared, or completed.</p>
+          </article>
+          <article class="preview-card" data-reveal>
+            <img src="images/auracache-shop-premium.png" alt="AuraCache Shopping screen">
+            <h3>Shop</h3>
+            <p>Keep product links separate from general saves and compare them later.</p>
+          </article>
+          <article class="preview-card" data-reveal>
+            <img src="images/auracache-profile-premium.png" alt="AuraCache Profile settings screen">
+            <h3>Profile</h3>
+            <p>Control language, reminder style, notifications, and optional AI summary settings.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white" id="features">
+      <div class="container">
+        <div class="section-header center" data-reveal>
+          <div class="kicker">Core Features</div>
+          <h2>Everything you save should have a next step.</h2>
+          <p>AuraCache is designed to help saved links become useful again — not just stored and forgotten.</p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card wide" data-reveal>
+            <span class="feature-badge amber">Shopping Shelf</span>
+            <h3>Dedicated shopping space</h3>
+            <p>Product links stay separate from your main feed, with shelves for buying soon, comparing, price watching, or maybe later.</p>
+          </article>
+          <article class="feature-card" data-reveal>
+            <span class="feature-badge pink">Social Saves</span>
+            <h3>Save from platforms</h3>
+            <p>Keep links from social apps, videos, articles, recipes, study pages, and ideas in one organized space.</p>
+          </article>
+          <article class="feature-card" data-reveal>
+            <span class="feature-badge sky">Reminders</span>
+            <h3>Return at the right time</h3>
+            <p>Set reminders so important links do not disappear into digital clutter.</p>
+          </article>
+          <article class="feature-card" data-reveal>
+            <span class="feature-badge green">Local-first</span>
+            <h3>Works without AI</h3>
+            <p>Core saving, organization, shopping, and reminders work without AI. Optional supported API-key features can improve titles and summaries.</p>
+          </article>
+          <article class="feature-card wide" data-reveal>
+            <span class="feature-badge violet">Organization</span>
+            <h3>Folders, categories, and clean context</h3>
+            <p>Organize saved links by intent rather than leaving them buried in static browser bookmarks.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="how-it-works">
+      <div class="container">
+        <div class="section-header center" data-reveal>
+          <div class="kicker">How It Works</div>
+          <h2>From saved link to useful action.</h2>
+        </div>
+
+        <div class="steps">
+          <article class="step-card" data-reveal><span>1</span><h3>Save</h3><p>Save links from apps, browsers, shops, and content platforms.</p></article>
+          <article class="step-card" data-reveal><span>2</span><h3>Organize</h3><p>Keep useful links grouped by category, shelf, and intent.</p></article>
+          <article class="step-card" data-reveal><span>3</span><h3>Remember</h3><p>Use reminders so links return when they still matter.</p></article>
+          <article class="step-card" data-reveal><span>4</span><h3>Act</h3><p>Watch, read, compare, research, buy, or complete what you saved.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="why-auracache">
+      <div class="container">
+        <div class="section-header center" data-reveal>
+          <div class="kicker">Why AuraCache</div>
+          <h2>Bookmarks save links. AuraCache brings them back.</h2>
+          <p>Traditional bookmarks store pages. AuraCache is designed for people who save content for a reason.</p>
+        </div>
+
+        <div class="compare-grid">
+          <article class="compare-card" data-reveal>
+            <h3>Typical bookmarks</h3>
+            <ul>
+              <li>Save and forget inside static folders.</li>
+              <li>No built-in reminder flow.</li>
+              <li>No shopping-focused space.</li>
+              <li>Browser-first storage that becomes clutter.</li>
+            </ul>
+          </article>
+          <article class="compare-card active" data-reveal>
+            <h3>AuraCache</h3>
+            <ul>
+              <li>Save and revisit with action-based memory.</li>
+              <li>Reminders for useful resurfacing.</li>
+              <li>Clear categories and shopping shelves.</li>
+              <li>Cross-platform saving in one focused app.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white" id="faq">
+      <div class="container">
+        <div class="section-header center" data-reveal>
+          <div class="kicker">FAQ</div>
+          <h2>Quick answers about AuraCache.</h2>
+        </div>
+
+        <div class="faq-grid">
+          <article class="faq-item" data-reveal>
+            <h3>What can I save with AuraCache?</h3>
+            <p>Social posts, shopping products, study resources, articles, videos, movie and series pages, recipes, travel ideas, and other useful links.</p>
+          </article>
+          <article class="faq-item" data-reveal>
+            <h3>Is AuraCache a social network or streaming service?</h3>
+            <p>No. AuraCache helps you save links to external content. It does not host social posts, movies, or series.</p>
+          </article>
+          <article class="faq-item" data-reveal>
+            <h3>Does AuraCache require AI?</h3>
+            <p>No. Core saving, organization, shopping, and reminders work without AI. Optional supported API-key features can improve titles and summaries.</p>
+          </article>
+          <article class="faq-item" data-reveal>
+            <h3>How is it different from bookmarks?</h3>
+            <p>AuraCache adds intent, reminders, shopping organization, and a focused app experience around saved links.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="social-section" id="social">
+    <div class="container">
+      <div class="social-card" data-reveal>
+        <div class="kicker">Follow AuraCache</div>
+        <h2>Stay updated.</h2>
+        <p>Follow AuraCache for product updates, release notes, and practical link-saving tips.</p>
+        <div class="social-links">
+          <a href="https://www.instagram.com/auracacheapp/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.tiktok.com/@auracacheapp" target="_blank" rel="noopener noreferrer">TikTok</a>
+          <a href="https://x.com/auracacheapp" target="_blank" rel="noopener noreferrer">X</a>
+          <a href="https://www.youtube.com/@auracacheapp" target="_blank" rel="noopener noreferrer">YouTube</a>
+          <a href="https://www.facebook.com/profile.php?id=61588921036730" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a href="https://www.pinterest.com/auracacheapp/" target="_blank" rel="noopener noreferrer">Pinterest</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand" href="#top" aria-label="AuraCache home">
+          <span class="brand-mark"><img src="android-chrome-192x192.png" alt="" width="24" height="24"></span>
+          <span>AuraCache</span>
+        </a>
+        <p>Save links. Find them when they matter.</p>
+      </div>
+
+      <div>
+        <h4>Product</h4>
+        <a href="#features">Features</a>
+        <a href="#app-preview">App Preview</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#why-auracache">Why AuraCache</a>
+      </div>
+
+      <div>
+        <h4>Legal</h4>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="delete-account/">Delete Account</a>
+      </div>
+
+      <div>
+        <h4>Contact</h4>
+        <a href="mailto:hello@auracache.app">hello@auracache.app</a>
+      </div>
+    </div>
+    <div class="container copyright">© 2026 AuraCache. All rights reserved.</div>
+  </footer>
+
+  <script>
+    (function(){
+      var items = document.querySelectorAll('[data-reveal]');
       if (!('IntersectionObserver' in window)) {
-        revealItems.forEach(function (item) {
-          item.classList.add('is-visible');
-        });
+        items.forEach(function(item){ item.classList.add('is-visible'); });
         return;
       }
-      var observer = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
+      var observer = new IntersectionObserver(function(entries){
+        entries.forEach(function(entry){
+          if(entry.isIntersecting){
             entry.target.classList.add('is-visible');
             observer.unobserve(entry.target);
           }
         });
-      }, {
-        threshold: 0.12,
-        rootMargin: '0px 0px -5% 0px'
-      });
-      revealItems.forEach(function (item) {
-        observer.observe(item);
-      });
+      }, {threshold: 0.12, rootMargin: '0px 0px -4% 0px'});
+      items.forEach(function(item){ observer.observe(item); });
     })();
-</script>
+  </script>
 </body>
 </html>
