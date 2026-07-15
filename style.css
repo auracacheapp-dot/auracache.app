@@ -1191,3 +1191,158 @@ h3,
     font-size: 1.22rem;
   }
 }
+/* Product Hunt launch polish */
+.product-hunt-badge {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 18px 42px rgba(255, 97, 85, 0.18);
+}
+
+.product-hunt-badge img {
+  width: 250px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.launch-hero-image {
+  padding: 0;
+  border-color: rgba(250, 204, 21, 0.34);
+  background: #050505;
+}
+
+.launch-hero-image img {
+  border-radius: 18px;
+}
+
+.launch-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 18% 0%, rgba(250, 204, 21, 0.18), transparent 32%),
+    radial-gradient(circle at 88% 18%, rgba(59, 130, 246, 0.12), transparent 30%),
+    #080a0f;
+  color: var(--text-main);
+}
+
+.launch-panel {
+  padding: clamp(24px, 4vw, 44px);
+  border: 1px solid rgba(250, 204, 21, 0.22);
+  border-radius: 22px;
+  background: rgba(15, 23, 42, 0.56);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.34);
+}
+
+.launch-header {
+  margin-bottom: 34px;
+}
+
+.launch-header h2 {
+  color: #ffffff;
+}
+
+.launch-header p {
+  color: rgba(226, 232, 240, 0.82);
+}
+
+.launch-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.launch-badge-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 18px;
+}
+
+.launch-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.launch-card {
+  overflow: hidden;
+  border: 1px solid rgba(250, 204, 21, 0.18);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 20px 54px rgba(0, 0, 0, 0.28);
+}
+
+.launch-card-large {
+  grid-column: 1 / -1;
+}
+
+.launch-card img {
+  width: 100%;
+  height: auto;
+  background: #050505;
+}
+
+.launch-card div {
+  padding: 18px 20px 20px;
+}
+
+.launch-card h3 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 1.15rem;
+  line-height: 1.2;
+}
+
+.launch-card p {
+  margin: 8px 0 0;
+  color: rgba(226, 232, 240, 0.78);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.site-footer .footer-links a[href*="producthunt"] {
+  color: #facc15;
+  font-weight: 800;
+}
+
+@media (max-width: 760px) {
+  .launch-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .launch-panel {
+    padding: 18px;
+  }
+
+  .hero-badge-row,
+  .launch-actions {
+    justify-content: stretch;
+  }
+
+  .hero-badge-row .product-hunt-badge,
+  .launch-badge-wrap .product-hunt-badge {
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 420px) {
+  .product-hunt-badge img {
+    width: 220px;
+  }
+
+  .launch-card div {
+    padding: 15px;
+  }
+}
